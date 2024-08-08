@@ -1,0 +1,1 @@
+<h1>Teste MVC simples <?= $test ?></h1>
