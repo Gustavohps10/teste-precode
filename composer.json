@@ -1,0 +1,16 @@
+{
+    "name": "gustavohps10/teste-precode",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gustavohps10\\TestePrecode\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gustavo Henrique",
+            "email": "gustavoh.santos735@gmail.com"
+        }
+    ],
+    "require": {}
+}
