@@ -7,7 +7,7 @@ use CoffeeCode\Router\Router;
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$router = new Router("http://localhost:8000");
+$router = new Router("http://localhost/teste-precode");
 
 /*
  *Controllers 
@@ -16,9 +16,7 @@ $router->namespace("App\Controllers");
 
 $router->group(null);
 
-$router->get("/", function () {
-    echo 'Home';
-});
+$router->get("/", 'WebController:home');
 $router->get('/test', function () {
     echo 'teste';
 });

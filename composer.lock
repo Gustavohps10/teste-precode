@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cf82e76e030cd27273344a41f16df11",
+    "content-hash": "ab62131075cb6e3dd9cb09564aa5ce0a",
     "packages": [
         {
             "name": "coffeecode/router",
