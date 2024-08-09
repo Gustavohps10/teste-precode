@@ -1,0 +1,13 @@
+:root {
+    --blue-600: #2f55d4;
+    --primary: #009de1;
+    --blue-300: #def5ff;
+    --blue-100: #ebeffb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
