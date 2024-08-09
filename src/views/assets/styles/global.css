@@ -1,5 +1,6 @@
 :root {
-    --blue-600: #2f55d4;
+    --blue-700: #114f7f;
+    --blue-600: #176aaa;
     --blue-500: #009de1;
     --blue-300: #def5ff;
     --blue-100: #ebeffb;
@@ -10,4 +11,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+}
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 6rem;
+    color: #1a1a1e;
+    background-color: #f6f8f9;
 }

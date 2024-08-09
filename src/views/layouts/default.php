@@ -12,6 +12,7 @@
     <link rel="stylesheet" href=<?= url("src/views/assets/styles/global.css") ?>>
     <link rel="stylesheet" href=<?= url("src/views/assets/styles/header.css") ?>>
     <title><?= $this->e($title) ?></title>
+    <?= $this->section('meta') ?>
 </head>
 
 <body>
@@ -27,8 +28,9 @@
         </nav>
     </header>
 
-
-    <?= $this->section('content') ?>
+    <div class="content">
+        <?= $this->section('content') ?>
+    </div>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
