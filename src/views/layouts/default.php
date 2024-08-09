@@ -12,6 +12,7 @@
     <link rel="stylesheet" href=<?= url("src/views/assets/styles/global.css") ?>>
     <link rel="stylesheet" href=<?= url("src/views/assets/styles/header.css") ?>>
     <link rel="stylesheet" href=<?= url("src/views/assets/styles/footer.css") ?>>
+    <link rel="stylesheet" href=<?= url("src/views/assets/styles/button.css") ?>>
     <title><?= $this->e($title) ?></title>
     <?= $this->section('meta') ?>
 </head>

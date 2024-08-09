@@ -10,6 +10,10 @@
             <h2>Teste com PHP para <br> <span>Desenvolvedor</span> Júnior</h2>
             <h3>By Gustavo Henrique</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, perferendis!</p>
+            <a href="#" class="button button-primary">
+                <i data-lucide="package-plus"></i>
+                Cadastrar Produto
+            </a>
         </div>
     </aside>
 

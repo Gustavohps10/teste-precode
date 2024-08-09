@@ -15,18 +15,19 @@ main aside .presentation-text h2 {
 
 main aside .presentation-text h2 span {
     color: var(--blue-700);
+    margin-bottom: 1rem;
 }
 
 main aside .presentation-text h3 {
-    margin: 2rem 0;
     font-size: 2.5rem;
     font-weight: 400;
 }
 
 main aside .presentation-text p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 300;
     color: #717171;
+    margin: 4rem 0;
 }
 
 main .presentation-container {
