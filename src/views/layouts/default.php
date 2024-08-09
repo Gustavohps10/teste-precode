@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href=<?= url("src/views/assets/styles/global.css") ?>>
     <link rel="stylesheet" href=<?= url("src/views/assets/styles/header.css") ?>>
+    <link rel="stylesheet" href=<?= url("src/views/assets/styles/footer.css") ?>>
     <title><?= $this->e($title) ?></title>
     <?= $this->section('meta') ?>
 </head>
@@ -31,6 +32,68 @@
     <div class="content">
         <?= $this->section('content') ?>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social">
+                <img src=<?= url("src/views/assets/images/precode-logo-white.png") ?>>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="about">
+                <h2>A empresa</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i data-lucide="chevron-right"></i>
+                            <span>Marketplaces</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i data-lucide="chevron-right"></i>
+                            <span>Soluções</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i data-lucide="chevron-right"></i>
+                            <span>Clientes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="utils">
+                <h2>Links úteis</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i data-lucide="chevron-right"></i>
+                            <span>API REST</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Fale conosco</h2>
+                <ul>
+                    <li>
+                        <i data-lucide="phone"></i>
+                        <span>(44) 99999-9999</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <i data-lucide="mail"></i>
+                        <span>example@precode.com.br</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <span class="copyright">Feito com ☕ por Gustavo Henrique © Copyright - 2024</span>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
