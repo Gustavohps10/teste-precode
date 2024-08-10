@@ -53,8 +53,10 @@
                 </div>
 
                 <div class="input-box">
-                    <label for="status">Status</label>
-                    STATUS
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="checkbox" />
+                        Ativo
+                    </label>
                 </div>
 
                 <div class="input-box">
