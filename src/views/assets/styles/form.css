@@ -52,6 +52,10 @@ form .form-header .tabs .tab.active::after {
     width: 100%;
 }
 
+form .form-body section#variations {
+    display: none;
+}
+
 form h2 {
     font-weight: 600;
     color: #212121;
@@ -129,4 +133,14 @@ textarea {
 .mult-inputs {
     display: flex;
     gap: 1rem;
+}
+
+.next-step {
+    position: relative;
+    float: right;
+}
+
+.previous-step {
+    position: relative;
+    float: left;
 }
