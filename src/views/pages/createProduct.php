@@ -9,231 +9,241 @@
         <div class="form-header">
             <h2>Registro de Produto</h2>
             <h3>Cadastre seu produto no formulário abaixo.</h3>
+
+            <div class="tabs">
+                <div class="tab" onclick="openSection(event, 'main')">Principal</div>
+                <div class="tab" onclick="openSection(event, 'variations')">Variações</div>
+            </div>
         </div>
 
         <hr>
 
         <div class="form-body">
-            <div class="input-box">
-                <label for="sku">SKU do produto pai (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="sku" name="sku" type="text">
-                </div>
-            </div>
+            <section id="main">
+                <h2>Informações principais</h2>
+                <br>
 
-            <div class="input-box">
-                <label for="name">Título do produto (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="name" name="name" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="shortName">Título curto (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="shortName" name="shortName" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="description">Descrição detalhada do produto (obrigatório)</label>
-                <textarea id="description" name="description"></textarea>
-            </div>
-
-            <div class="input-box">
-                <label for="status">Status</label>
-                STATUS
-            </div>
-
-            <div class="input-box">
-                <label for="wordKeys">Palavras chave (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="wordKeys" name="wordKeys" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="price">Preço de venda (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="price" name="price" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="promotional_price">Preço promocinal (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="promotional_price" name="promotional_price" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="cost">Custo (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="cost" name="cost" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="weight">Peso em kg (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="weight" name="weight" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="width">Largura(cm) (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="width" name="width" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="height">Altura(cm) (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="height" name="height" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="length">Comprimento(cm) (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="length" name="length" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="brand">Marca (obrigatório)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="brand" name="brand" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="nbm">NBM - Código fiscal do produto (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="nbm" name="nbm" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="model">Modelo do produto (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="model" name="model" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="gender">Gênero do produto (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="gender" name="gender" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="volumes">Quantidade de volumes (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="volumes" name="volumes" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="warrantyTime">Tempo de garantia(meses) (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="warrantyTime" name="warrantyTime" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="category">Categoria (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="category" name="category" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="subcategory">Subcategoria (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="subcategory" name="subcategory" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="endcategory">Categoria Final (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="endcategory" name="endcategory" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="urlYoutube">URL video do produto (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="urlYoutube" name="urlYoutube" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="googleDescription">Descrição do Google para SEO (opcional)</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="googleDescription" name="googleDescription" type="text">
-                </div>
-            </div>
-
-            <div class="input-box">
-                <label for="manufacturing">Fabricação - SELECT</label>
-                <div class="text-input">
-                    <i data-lucide="package-plus"></i>
-                    <input id="manufacturing" name="manufacturing" type="text">
-                </div>
-            </div>
-
-            <div class="attributes">
-                <h2>Atributos</h2>
-
-                <div class="attribute">
-                    <div class="input-box">
-                        <label for="attributeKey1">Key</label>
-                        <div class="text-input">
-                            <i data-lucide="package-plus"></i>
-                            <input id="attributeKey1" name="attributeKey1" type="text">
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <label for="attributeValue1">Value</label>
-                        <div class="text-input">
-                            <i data-lucide="package-plus"></i>
-                            <input id="attributeValue1" name="attributeValue1" type="text">
-                        </div>
+                <div class="input-box">
+                    <label for="sku">SKU do produto pai (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="sku" name="sku" type="text">
                     </div>
                 </div>
 
-                <button class="button button-tertiary">Novo atributo</button>
-            </div>
+                <div class="input-box">
+                    <label for="name">Título do produto (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="name" name="name" type="text">
+                    </div>
+                </div>
 
-            <hr>
-            <section class="variations">
+                <div class="input-box">
+                    <label for="shortName">Título curto (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="shortName" name="shortName" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="description">Descrição detalhada do produto (obrigatório)</label>
+                    <textarea id="description" name="description"></textarea>
+                </div>
+
+                <div class="input-box">
+                    <label for="status">Status</label>
+                    STATUS
+                </div>
+
+                <div class="input-box">
+                    <label for="wordKeys">Palavras chave (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="wordKeys" name="wordKeys" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="price">Preço de venda (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="price" name="price" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="promotional_price">Preço promocinal (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="promotional_price" name="promotional_price" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="cost">Custo (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="cost" name="cost" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="weight">Peso em kg (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="weight" name="weight" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="width">Largura(cm) (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="width" name="width" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="height">Altura(cm) (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="height" name="height" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="length">Comprimento(cm) (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="length" name="length" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="brand">Marca (obrigatório)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="brand" name="brand" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="nbm">NBM - Código fiscal do produto (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="nbm" name="nbm" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="model">Modelo do produto (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="model" name="model" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="gender">Gênero do produto (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="gender" name="gender" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="volumes">Quantidade de volumes (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="volumes" name="volumes" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="warrantyTime">Tempo de garantia(meses) (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="warrantyTime" name="warrantyTime" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="category">Categoria (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="category" name="category" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="subcategory">Subcategoria (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="subcategory" name="subcategory" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="endcategory">Categoria Final (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="endcategory" name="endcategory" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="urlYoutube">URL video do produto (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="urlYoutube" name="urlYoutube" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="googleDescription">Descrição do Google para SEO (opcional)</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="googleDescription" name="googleDescription" type="text">
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="manufacturing">Fabricação - SELECT</label>
+                    <div class="text-input">
+                        <i data-lucide="package-plus"></i>
+                        <input id="manufacturing" name="manufacturing" type="text">
+                    </div>
+                </div>
+
+                <div class="attributes">
+                    <h2>Atributos</h2>
+
+                    <div class="attribute">
+                        <div class="input-box">
+                            <label for="attributeKey1">Key</label>
+                            <div class="text-input">
+                                <i data-lucide="package-plus"></i>
+                                <input id="attributeKey1" name="attributeKey1" type="text">
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <label for="attributeValue1">Value</label>
+                            <div class="text-input">
+                                <i data-lucide="package-plus"></i>
+                                <input id="attributeValue1" name="attributeValue1" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="button button-tertiary">Novo atributo</button>
+                </div>
+            </section>
+
+            <section id="variations">
                 <h2>Variações do produto</h2>
+                <br>
 
                 <div class="variation1">
                     <div class="input-box">
@@ -305,7 +315,6 @@
                 <button class="button button-primary">Nova variação</button>
             </section>
 
-
         </div>
 
         <div class="form-footer">
@@ -313,3 +322,22 @@
         </div>
     </form>
 </div>
+
+<script>
+    function openSection(event, sectionName) {
+        let sections = document.querySelectorAll('.form-body > section')
+        sections.forEach(section => {
+            section.style.display = 'none';
+        })
+
+        let activeSection = document.getElementById(sectionName);
+        activeSection.style.display = 'block';
+
+        let tabs = document.querySelectorAll(".tab");
+        tabs.forEach(tab => {
+            tab.classList.remove("active");
+        });
+
+        event.target.classList.add("active");
+    }
+</script>

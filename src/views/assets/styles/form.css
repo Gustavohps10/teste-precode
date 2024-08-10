@@ -12,6 +12,46 @@ form .form-body,
     padding: 1rem 0;
 }
 
+form .form-header .tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    color: #717171;
+}
+
+form .form-header .tabs .tab {
+    position: relative;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 0.25rem 0.5rem;
+}
+
+form .form-header .tabs .tab::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 0;
+    bottom: -4px;
+    left: 0;
+    background-color: #c6c9cd;
+}
+
+form .form-header .tabs .tab:hover::after {
+    width: 100%;
+}
+
+
+form .form-header .tabs .tab.active {
+    font-weight: 600;
+    color: var(--blue-600);
+}
+
+form .form-header .tabs .tab.active::after {
+    background-color: var(--blue-600);
+    width: 100%;
+}
+
 form h2 {
     font-weight: 600;
     color: #212121;
