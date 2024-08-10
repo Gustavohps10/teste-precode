@@ -4,13 +4,6 @@
     color: #fff;
 }
 
-.footer .container {
-    margin: 0 auto;
-    max-width: 1920px;
-    display: flex;
-    justify-content: space-around;
-}
-
 .footer .container>div {
     width: 300px;
 }

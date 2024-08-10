@@ -16,10 +16,10 @@ $router->namespace("App\Controllers");
 
 $router->group(null);
 
-$router->get("/", 'WebController:home');
-$router->get('/test', function () {
-    echo 'teste';
-});
+$router->get("/", 'WebController:home', 'app.home');
+
+$router->group('/produto');
+$router->get('/cadastro', 'ProductController:create', 'product.create');
 
 $router->dispatch();
 
