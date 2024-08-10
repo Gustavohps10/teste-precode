@@ -225,10 +225,14 @@
                 </div>
 
                 <div class="input-box">
-                    <label for="manufacturing">Fabricação - SELECT</label>
-                    <div class="text-input">
-                        <i data-lucide="earth"></i>
-                        <input id="manufacturing" name="manufacturing" type="text">
+                    <label for="manufacturing">Fabricação (opcional)</label>
+                    <div class="custom-select">
+                        <select id="manufacturing" name="status">
+                            <option>Selecionar</option>
+                            <option value="Nacional"><i data-lucide="map-pin-house"></i>Nacional</option>
+                            <option value="Importado"><i data-lucide="plane-landing"></i>Importado</option>
+                        </select>
+
                     </div>
                 </div>
 
