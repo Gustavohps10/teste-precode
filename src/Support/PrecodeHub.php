@@ -24,7 +24,7 @@ abstract class PrecodeHub
     public function post()
     {
         $headers = array(
-            'Content-Type:application/json',
+            'Content-Type: application/json; charset=UTF-8',
             'Authorization: Basic ' . $this->apiAuthToken
         );
 
@@ -34,7 +34,9 @@ abstract class PrecodeHub
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($this->build));
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        $this->callback = json_decode(curl_exec($ch), true);
+        $output = curl_exec($ch);
+        $result = iconv('UTF-8', 'ISO-8859-1//TRANSLIT', $output);
+        $this->callback = json_decode($result, true);
         curl_close($ch);
     }
 }

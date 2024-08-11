@@ -33,14 +33,19 @@ class ProductController extends Controller
         $productManagement = new ProductManagement();
         $response = $productManagement->createProduct($data)->callback();
 
-        if ($response["message"] == "sucesso") {
+        if (isset($response["message"]) && $response["message"] == "sucesso") {
             echo "Sucesso";
             // $this->router->redirect("products.sucess");
             return;
         }
-        echo "erro";
 
-        // $this->router->redirect("products.create");
+        $error["message"] = isset($response["message"]) ? $response["message"] : "Falha ao cadastrar. Ocorreu um erro inesperado!";
+        $error["code"] = isset($response["code"]) ?? null;
+
+        echo $this->view->render('createProduct', [
+            "error" => $error,
+            "data" => $data
+        ]);
     }
 
     public function sucess()

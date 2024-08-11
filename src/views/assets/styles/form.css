@@ -183,3 +183,24 @@ textarea {
     border-top: var(--size) solid black;
     top: 55%;
 }
+
+.invalid-input {
+    border-color: rgb(198, 62, 62);
+}
+
+.error-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2px 0;
+    color: #fff;
+    font-size: 0.875rem;
+    border: 2px solid;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid red;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background-color: #d86868;
+}
