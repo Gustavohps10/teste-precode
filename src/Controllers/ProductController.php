@@ -30,6 +30,9 @@ class ProductController extends Controller
         $data["volumes"] = (float) $data["volumes"];
         $data["warrantyTime"] = (int) $data["warrantyTime"];
 
+        echo json_encode($data);
+        return;
+
         $productManagement = new ProductManagement();
         $response = $productManagement->createProduct($data)->callback();
 

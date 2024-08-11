@@ -281,33 +281,33 @@
 
                     <div id="attributes-container">
                         <?php if (isset($data["attribute"])):
-                            for ($i = 0; $i <= count($data["attribute"]) - 1; $i++):
+                            foreach ($data["attribute"] as $key => $attribute):
                                 ?>
-                                <div id="<?= $i ?>" class="attribute">
+                                <div id="<?= $key ?>" class="attribute">
                                     <div class="mult-inputs">
                                         <div class="input-box key">
-                                            <label for="attribute[<?= $i ?>][key]">Chave</label>
+                                            <label for="attribute[<?= $key ?>][key]">Chave</label>
                                             <div class="text-input">
                                                 <i data-lucide="key-square"></i>
-                                                <input id="attribute[<?= $i ?>][key]" name="attribute[<?= $i ?>][key]"
-                                                    type="text" placeholder="Exemplo: Cor"
-                                                    value="<?= $data["attribute"][$i]['key'] ?>">
+                                                <input id="attribute[<?= $key ?>][key]" name="attribute[<?= $key ?>][key]"
+                                                    type="text" placeholder="Exemplo: Cor" value="<?= $attribute['key'] ?>">
                                             </div>
                                         </div>
                                         <div class="input-box value">
-                                            <label for="attribute[<?= $i ?>][value]">Valor</label>
+                                            <label for="attribute[<?= $key ?>][value]">Valor</label>
                                             <div class="text-input">
                                                 <i data-lucide="whole-word"></i>
-                                                <input id="attribute[<?= $i ?>][value]" name="attribute[<?= $i ?>][value]"
+                                                <input id="attribute[<?= $key ?>][value]" name="attribute[<?= $key ?>][value]"
                                                     type="text" placeholder="Exemplo: Amendôa"
-                                                    value="<?= $data["attribute"][$i]['value'] ?>">
+                                                    value="<?= $attribute['value'] ?>">
                                             </div>
                                         </div>
-                                        <button class="button button-danger sm" type="button"><i
+                                        <button onclick="destroyAttribute(this)" id="<?= $key ?>"
+                                            class="button button-danger sm remove-attribute" type="button"><i
                                                 data-lucide="trash-2"></i></button>
                                     </div>
                                 </div>
-                            <?php endfor; ?>
+                            <?php endforeach; ?>
                         <?php else: ?>
                             <div id="0" class="attribute">
                                 <div class="mult-inputs">
@@ -327,7 +327,8 @@
                                                 placeholder="Exemplo: Amendôa">
                                         </div>
                                     </div>
-                                    <button class="button button-danger sm" type="button"><i
+                                    <button onclick="destroyAttribute(this)"
+                                        class="button button-danger sm remove-attribute" type="button"><i
                                             data-lucide="trash-2"></i></button>
                                 </div>
                             </div>
@@ -464,6 +465,7 @@
 
     document.querySelector('form').addEventListener('click', hideErrors);
 
+    // New attribute
     let btnNewAttribute = document.getElementById("new-attribute");
     btnNewAttribute.addEventListener('click', () => {
         let attributes = document.querySelectorAll('#attributes-container .attribute');
@@ -492,5 +494,11 @@
 
         let attributesContainer = document.getElementById('attributes-container');
         attributesContainer.appendChild(clone);
-    })
+    });
+
+    // Remove Atrribute
+    function destroyAttribute(btn) {
+        let attribute = btn.closest(".attribute");
+        attribute.remove();
+    } 
 </script>
