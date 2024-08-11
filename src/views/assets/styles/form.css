@@ -122,6 +122,7 @@ textarea {
     width: 100%;
 }
 
+
 .text-input:focus-within,
 textarea:focus,
 .custom-select select:focus {

@@ -35,7 +35,8 @@
                     <label for="sku">SKU do produto pai (opcional)</label>
                     <div class="text-input">
                         <i data-lucide="barcode"></i>
-                        <input id="sku" name="sku" type="number" maxlength="10" value="<?= $data["sku"] ?? '' ?>">
+                        <input id="sku" name="sku" type="number" maxlength="10" value="<?= $data["sku"] ?? '' ?>"
+                            placeholder="Sku do produto pai. Exemplo: 123456789">
                     </div>
                 </div>
 
@@ -43,7 +44,8 @@
                     <label for="name">Título do produto (obrigatório)</label>
                     <div class="text-input">
                         <i data-lucide="package"></i>
-                        <input id="name" name="name" type="text" value="<?= $data["name"] ?? '' ?>">
+                        <input id="name" name="name" type="text" value="<?= $data["name"] ?? '' ?>"
+                            placeholder="Título do produto. Exemplo: Guarda-roupa Casal 6 portas Amendôa...">
                     </div>
                 </div>
 
@@ -51,13 +53,15 @@
                     <label for="shortName">Título curto (opcional)</label>
                     <div class="text-input">
                         <i data-lucide="package"></i>
-                        <input id="shortName" name="shortName" type="text" value="<?= $data["shortName"] ?? '' ?>">
+                        <input id="shortName" name="shortName" type="text" value="<?= $data["shortName"] ?? '' ?>"
+                            placeholder="Título curto do produto. Exemplo: Guarda-roupa Casal...">
                     </div>
                 </div>
 
                 <div class="input-box">
                     <label for="description">Descrição detalhada do produto (obrigatório)</label>
-                    <textarea id="description" name="description"><?= $data["description"] ?? '' ?></textarea>
+                    <textarea id="description" name="description"
+                        placeholder="Exemplo: O Guarda Roupas Flahs é a escolha perfeita para você que busca praticidade, conforto, e design moderno ..."><?= $data["description"] ?? '' ?></textarea>
                 </div>
 
                 <div class="input-box">
@@ -71,7 +75,8 @@
                     <label for="wordKeys">Palavras chave (opcional)</label>
                     <div class="text-input">
                         <i data-lucide="whole-word"></i>
-                        <input id="wordKeys" name="wordKeys" type="text" value="<?= $data["wordKeys"] ?? '' ?>">
+                        <input id="wordKeys" name="wordKeys" type="text" value="<?= $data["wordKeys"] ?? '' ?>"
+                            placeholder="Exemplo: guarda-roupa casal amendôa">
                     </div>
                 </div>
 
@@ -80,7 +85,8 @@
                         <label for="price">Preço de venda (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="circle-dollar-sign"></i>
-                            <input id="price" name="price" type="number" value="<?= $data["price"] ?? '' ?>">
+                            <input id="price" name="price" type="number" value="<?= $data["price"] ?? '' ?>"
+                                placeholder="Exemplo: 1000,00">
                         </div>
                     </div>
 
@@ -89,7 +95,7 @@
                         <div class="text-input">
                             <i data-lucide="badge-percent"></i>
                             <input id="promotional_price" name="promotional_price" type="number"
-                                value="<?= $data["promotional_price"] ?? '' ?>">
+                                value="<?= $data["promotional_price"] ?? '' ?>" placeholder="Exemplo: 1200,00">
                         </div>
                     </div>
 
@@ -97,35 +103,39 @@
                         <label for="cost">Custo (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="hand-coins"></i>
-                            <input id="cost" name="cost" type="number" value="<?= $data["cost"] ?? '' ?>">
+                            <input id="cost" name="cost" type="number" value="<?= $data["cost"] ?? '' ?>"
+                                placeholder="Exemplo: 950,00">
                         </div>
                     </div>
                 </div>
 
                 <div class="mult-inputs">
                     <div class="input-box">
-                        <label for="width">Largura(cm) (obrigatório)</label>
+                        <label for="width">Largura em cm (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="pencil-ruler"></i>
-                            <input id="width" name="width" type="number" value="<?= $data["width"] ?? '' ?>">
+                            <input id="width" name="width" type="number" value="<?= $data["width"] ?? '' ?>"
+                                placeholder="Exemplo: 150">
                         </div>
                     </div>
 
                     <div class="input-box">
-                        <label for="height">Altura(cm) (obrigatório)</label>
+                        <label for="height">Altura em cm (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="pencil-ruler"></i>
-                            <input id="height" name="height" type="number" value="<?= $data["height"] ?? '' ?>">
+                            <input id="height" name="height" type="number" value="<?= $data["height"] ?? '' ?>"
+                                placeholder="Exemplo: 180">
                         </div>
                     </div>
                 </div>
 
                 <div class="mult-inputs">
                     <div class="input-box">
-                        <label for="length">Comprimento(cm) (obrigatório)</label>
+                        <label for="length">Profundidade em cm (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="pencil-ruler"></i>
-                            <input id="length" name="length" type="number" value="<?= $data["length"] ?? '' ?>">
+                            <input id="length" name="length" type="number" value="<?= $data["length"] ?? '' ?>"
+                                placeholder="Exemplo: 47">
                         </div>
                     </div>
 
@@ -133,7 +143,8 @@
                         <label for="weight">Peso em kg (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="weight"></i>
-                            <input id="weight" name="weight" type="number" value="<?= $data["weight"] ?? '' ?>">
+                            <input id="weight" name="weight" type="number" value="<?= $data["weight"] ?? '' ?>"
+                                placeholder="Exemplo: 68,8">
                         </div>
                     </div>
                 </div>
@@ -142,7 +153,8 @@
                     <label for="brand">Marca (obrigatório)</label>
                     <div class="text-input">
                         <i data-lucide="tag"></i>
-                        <input id="brand" name="brand" type="text" value="<?= $data["brand"] ?? '' ?>">
+                        <input id="brand" name="brand" type="text" value="<?= $data["brand"] ?? '' ?>"
+                            placeholder="Exemplo: Demóbile">
                     </div>
                 </div>
 
@@ -150,7 +162,8 @@
                     <label for="nbm">NBM - Código fiscal do produto (opcional)</label>
                     <div class="text-input">
                         <i data-lucide="barcode"></i>
-                        <input id="nbm" name="nbm" type="text" value="<?= $data["nbm"] ?? '' ?>">
+                        <input id="nbm" name="nbm" type="text" value="<?= $data["nbm"] ?? '' ?>"
+                            placeholder="Código fiscal">
                     </div>
                 </div>
 
@@ -159,7 +172,8 @@
                         <label for="model">Modelo do produto (opcional)</label>
                         <div class="text-input">
                             <i data-lucide="file-box"></i>
-                            <input id="model" name="model" type="text" value="<?= $data["model"] ?? '' ?>">
+                            <input id="model" name="model" type="text" value="<?= $data["model"] ?? '' ?>"
+                                placeholder="Exemplo: Guarda Roupas Casal 6 portas 2 Gavetas Flash Amêndoa Demóbile">
                         </div>
                     </div>
 
@@ -167,7 +181,8 @@
                         <label for="gender">Gênero do produto (opcional)</label>
                         <div class="text-input">
                             <i data-lucide="package-open"></i>
-                            <input id="gender" name="gender" type="text" value="<?= $data["genre"] ?? '' ?>">
+                            <input id="gender" name="gender" type="text" value="<?= $data["genre"] ?? '' ?>"
+                                placeholder="Gênero">
                         </div>
                     </div>
                 </div>
@@ -177,16 +192,17 @@
                         <label for="volumes">Quantidade de volumes (opcional)</label>
                         <div class="text-input">
                             <i data-lucide="boxes"></i>
-                            <input id="volumes" name="volumes" type="number" value="<?= $data["volumes"] ?? '' ?>">
+                            <input id="volumes" name="volumes" type="number" value="<?= $data["volumes"] ?? '' ?>"
+                                placeholder="Exemplo: 2">
                         </div>
                     </div>
 
                     <div class="input-box">
-                        <label for="warrantyTime">Tempo de garantia(meses) (opcional)</label>
+                        <label for="warrantyTime">Tempo de garantia em meses (opcional)</label>
                         <div class="text-input">
                             <i data-lucide="calendar-days"></i>
                             <input id="warrantyTime" name="warrantyTime" type="text"
-                                value="<?= $data["warrantyTime"] ?? '' ?>">
+                                value="<?= $data["warrantyTime"] ?? '' ?>" placeholder="Exemplo: 6">
                         </div>
                     </div>
                 </div>
@@ -196,7 +212,8 @@
                         <label for="category">Categoria (opcional)</label>
                         <div class="text-input">
                             <i data-lucide="square-stack"></i>
-                            <input id="category" name="category" type="text" value="<?= $data["category"] ?? '' ?>">
+                            <input id="category" name="category" type="text" value="<?= $data["category"] ?? '' ?>"
+                                placeholder="Exemplo: Móveis">
                         </div>
                     </div>
 
@@ -205,7 +222,7 @@
                         <div class="text-input">
                             <i data-lucide="square-stack"></i>
                             <input id="subcategory" name="subcategory" type="text"
-                                value="<?= $data["subcategory"] ?? '' ?>">
+                                value="<?= $data["subcategory"] ?? '' ?>" placeholder="Exemplo: Quarto Casal">
                         </div>
                     </div>
 
@@ -214,7 +231,7 @@
                         <div class="text-input">
                             <i data-lucide="square-stack"></i>
                             <input id="endcategory" name="endcategory" type="text"
-                                value="<?= $data["endcategory"] ?? '' ?>">
+                                value="<?= $data["endcategory"] ?? '' ?>" placeholder="Exemplo: Roupeiro">
                         </div>
                     </div>
                 </div>
@@ -223,7 +240,8 @@
                     <label for="urlYoutube">URL video do produto (opcional)</label>
                     <div class="text-input">
                         <i data-lucide="youtube"></i>
-                        <input id="urlYoutube" name="urlYoutube" type="text" value="<?= $data["urlYoutube"] ?? '' ?>">
+                        <input id="urlYoutube" name="urlYoutube" type="text" value="<?= $data["urlYoutube"] ?? '' ?>"
+                            placeholder="Exemplo: https://www.youtube.com/watch?v=ABCXYZ123">
                     </div>
                 </div>
 
@@ -232,7 +250,8 @@
                     <div class="text-input">
                         <i data-lucide="chrome"></i>
                         <input id="googleDescription" name="googleDescription" type="text"
-                            value="<?= $data["googleDescription"] ?? '' ?>">
+                            value="<?= $data["googleDescription"] ?? '' ?>"
+                            placeholder="Exemplo: Guarda-roupa Casal 6 portas Amendôa...">
                     </div>
                 </div>
 
@@ -260,14 +279,16 @@
                                 <label for="attribute[0][key]">Chave</label>
                                 <div class="text-input">
                                     <i data-lucide="key-square"></i>
-                                    <input id="attribute[0][key]" name="attribute[0][key]" type="text">
+                                    <input id="attribute[0][key]" name="attribute[0][key]" type="text"
+                                        placeholder="Exemplo: Cor">
                                 </div>
                             </div>
                             <div class="input-box">
                                 <label for="attribute[0][value]">Valor</label>
                                 <div class="text-input">
                                     <i data-lucide="whole-word"></i>
-                                    <input id="attribute[0][value]" name="attribute[0][value]" type="text">
+                                    <input id="attribute[0][value]" name="attribute[0][value]" type="text"
+                                        placeholder="Exemplo: Amendôa">
                                 </div>
                             </div>
                         </div>
@@ -291,28 +312,32 @@
                         <label for="variationRef">Ref</label>
                         <div class="text-input">
                             <i data-lucide="barcode"></i>
-                            <input id="variationRef" name="variations[0][ref]" type="text">
+                            <input id="variationRef" name="variations[0][ref]" type="text"
+                                placeholder="Código alfanumérico de referência do sku, que pode ser o sku da loja/integradora">
                         </div>
                     </div>
                     <div class="input-box">
                         <label for="variationSku">SKU</label>
                         <div class="text-input">
                             <i data-lucide="barcode"></i>
-                            <input id="variationSku" name="variations[0][sku]" type="text">
+                            <input id="variationSku" name="variations[0][sku]" type="text"
+                                placeholder="Código sku da variação">
                         </div>
                     </div>
                     <div class="input-box">
                         <label for="variationQty">Quantidade em estoque</label>
                         <div class="text-input">
                             <i data-lucide="boxes"></i>
-                            <input id="variationQty" name="variations[0][qty]" type="number">
+                            <input id="variationQty" name="variations[0][qty]" type="number"
+                                placeholder="Quantidade em estoque">
                         </div>
                     </div>
                     <div class="input-box">
                         <label for="variationEan">Código EAN</label>
                         <div class="text-input">
                             <i data-lucide="scan-barcode"></i>
-                            <input id="variationEan" name="variations[0][ean]" type="text">
+                            <input id="variationEan" name="variations[0][ean]" type="text"
+                                placeholder="Código ean da variação">
                         </div>
                     </div>
 
@@ -322,7 +347,8 @@
                             <label>Imagem 1</label>
                             <div class="text-input">
                                 <i data-lucide="images"></i>
-                                <input name="variations[0][images][0]" type="text">
+                                <input name="variations[0][images][0]" type="text"
+                                    placeholder="Exemplo: https://www.seudominio.com.br/images/imagem.jpg">
                             </div>
                         </div>
 
@@ -338,7 +364,7 @@
                                     <div class="text-input">
                                         <i data-lucide="key-square"></i>
                                         <input id="specificationKey1" name="variations[0][specifications][0][key]"
-                                            type="text">
+                                            type="text" placeholder="Exemplo: Cor">
                                     </div>
                                 </div>
                                 <div class="input-box">
@@ -346,7 +372,7 @@
                                     <div class="text-input">
                                         <i data-lucide="whole-word"></i>
                                         <input id="specificationValue1" name="variations[0][specifications][0][value]"
-                                            type="text">
+                                            type="text" placeholder="Exemplo: Branco">
                                     </div>
                                 </div>
                             </div>
