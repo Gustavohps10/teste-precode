@@ -273,28 +273,66 @@
                     <h2>Atributos (opcional)</h2>
                     <br>
 
-                    <div class="attribute">
-                        <div class="mult-inputs">
-                            <div class="input-box">
-                                <label for="attribute[0][key]">Chave</label>
-                                <div class="text-input">
-                                    <i data-lucide="key-square"></i>
-                                    <input id="attribute[0][key]" name="attribute[0][key]" type="text"
-                                        placeholder="Exemplo: Cor">
-                                </div>
-                            </div>
-                            <div class="input-box">
-                                <label for="attribute[0][value]">Valor</label>
-                                <div class="text-input">
-                                    <i data-lucide="whole-word"></i>
-                                    <input id="attribute[0][value]" name="attribute[0][value]" type="text"
-                                        placeholder="Exemplo: Amendôa">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="controls">
+                        <button id="new-attribute" class="button button-tertiary sm" type="button"><i
+                                data-lucide="plus"></i>Novo</button>
                     </div>
+                    <br>
 
-
+                    <div id="attributes-container">
+                        <?php if (isset($data["attribute"])):
+                            for ($i = 0; $i <= count($data["attribute"]) - 1; $i++):
+                                ?>
+                                <div id="<?= $i ?>" class="attribute">
+                                    <div class="mult-inputs">
+                                        <div class="input-box key">
+                                            <label for="attribute[<?= $i ?>][key]">Chave</label>
+                                            <div class="text-input">
+                                                <i data-lucide="key-square"></i>
+                                                <input id="attribute[<?= $i ?>][key]" name="attribute[<?= $i ?>][key]"
+                                                    type="text" placeholder="Exemplo: Cor"
+                                                    value="<?= $data["attribute"][$i]['key'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="input-box value">
+                                            <label for="attribute[<?= $i ?>][value]">Valor</label>
+                                            <div class="text-input">
+                                                <i data-lucide="whole-word"></i>
+                                                <input id="attribute[<?= $i ?>][value]" name="attribute[<?= $i ?>][value]"
+                                                    type="text" placeholder="Exemplo: Amendôa"
+                                                    value="<?= $data["attribute"][$i]['value'] ?>">
+                                            </div>
+                                        </div>
+                                        <button class="button button-danger sm" type="button"><i
+                                                data-lucide="trash-2"></i></button>
+                                    </div>
+                                </div>
+                            <?php endfor; ?>
+                        <?php else: ?>
+                            <div id="0" class="attribute">
+                                <div class="mult-inputs">
+                                    <div class="input-box key">
+                                        <label for="attribute[0][key]">Chave</label>
+                                        <div class="text-input">
+                                            <i data-lucide="key-square"></i>
+                                            <input id="attribute[0][key]" name="attribute[0][key]" type="text"
+                                                placeholder="Exemplo: Cor">
+                                        </div>
+                                    </div>
+                                    <div class="input-box value">
+                                        <label for="attribute[0][value]">Valor</label>
+                                        <div class="text-input">
+                                            <i data-lucide="whole-word"></i>
+                                            <input id="attribute[0][value]" name="attribute[0][value]" type="text"
+                                                placeholder="Exemplo: Amendôa">
+                                        </div>
+                                    </div>
+                                    <button class="button button-danger sm" type="button"><i
+                                            data-lucide="trash-2"></i></button>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
 
                 <br>
@@ -425,4 +463,34 @@
     }
 
     document.querySelector('form').addEventListener('click', hideErrors);
+
+    let btnNewAttribute = document.getElementById("new-attribute");
+    btnNewAttribute.addEventListener('click', () => {
+        let attributes = document.querySelectorAll('#attributes-container .attribute');
+        let lastAttribute = attributes[attributes.length - 1];
+        let attributeIndex = +lastAttribute.attributes.id.value;
+
+        let clone = lastAttribute.cloneNode(true);
+        let cloneIndex = attributeIndex + 1;
+        clone.attributes.id.value = cloneIndex;
+
+        // Attribute Key
+        let cloneKeyLabel = clone.querySelector('.key label');
+        let cloneKeyInput = clone.querySelector('.key input');
+
+        cloneKeyLabel.setAttribute("for", `attribute[${cloneIndex}][key]`);
+        cloneKeyInput.setAttribute("id", `attribute[${cloneIndex}][key]`);
+        cloneKeyInput.setAttribute("name", `attribute[${cloneIndex}][key]`);
+
+        // Attribute Value
+        let cloneValueLabel = clone.querySelector('.value label');
+        let cloneValueInput = clone.querySelector('.value input');
+
+        cloneValueLabel.setAttribute("for", `attribute[${cloneIndex}][value]`);
+        cloneValueInput.setAttribute("id", `attribute[${cloneIndex}][value]`);
+        cloneValueInput.setAttribute("name", `attribute[${cloneIndex}][value]`);
+
+        let attributesContainer = document.getElementById('attributes-container');
+        attributesContainer.appendChild(clone);
+    })
 </script>

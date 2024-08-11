@@ -16,8 +16,8 @@
     transition: all .2s ease;
     text-decoration: none;
     flex: content;
-    max-width: 250px;
-    max-height: 48px;
+    max-width: max-content;
+    min-width: min-content;
 }
 
 .button.button-primary {
@@ -50,4 +50,41 @@
 
 .button.button-tertiary:hover {
     background-color: var(--blue-300);
+}
+
+.button.button-danger {
+    color: #fff;
+    background-color: #db7272;
+}
+
+
+.button.button-danger:hover {
+    background-color: #df5d5d;
+}
+
+
+.button.sm {
+    padding: 0.6rem;
+    font-size: 0.875rem;
+}
+
+.button.md {
+    padding: 0.8rem 1.5rem;
+    max-height: 32px;
+    font-size: 1rem;
+}
+
+.button.lg {
+    max-height: 36px;
+    font-size: 1.125rem;
+}
+
+.button.sm svg {
+    height: 16px;
+    width: 16px;
+}
+
+.controls {
+    display: flex;
+    gap: 0.5rem;
 }

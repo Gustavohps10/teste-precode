@@ -141,6 +141,7 @@ textarea:focus,
 .mult-inputs {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .next-step {
@@ -212,4 +213,9 @@ textarea:focus,
     font-size: 1rem;
     margin-bottom: 1rem;
     background-color: #d86868;
+}
+
+
+.attribute-base-container {
+    /* display: none; */
 }
