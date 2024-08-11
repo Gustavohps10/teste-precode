@@ -109,16 +109,23 @@ label {
 }
 
 textarea {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
     border: 2px solid #dee2e6;
     background-color: #fff;
+    outline: none;
 
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 400;
     resize: vertical;
     min-height: 80;
     width: 100%;
+}
+
+.text-input:focus-within,
+textarea:focus,
+.custom-select select:focus {
+    border-color: var(--blue-600) !important;
 }
 
 .checkbox-container {
@@ -153,12 +160,13 @@ textarea {
 .custom-select select {
     appearance: none;
     width: 100%;
-    font-size: 1.15rem;
+    font-size: 1rem;
     padding: 0.5rem 1.25rem;
     background-color: #fff;
-    border: 1px solid #dee2e6;
+    border: 2px solid #dee2e6;
     border-radius: 8px;
     cursor: pointer;
+    outline: none;
 }
 
 .custom-select::before,
