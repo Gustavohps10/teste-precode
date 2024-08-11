@@ -5,7 +5,7 @@
 <?php $this->stop() ?>
 
 <div class="container">
-    <form action="#" method="post">
+    <form action="<?= $router->route("products.store"); ?>" method="post" autocomplete="off" novalidate>
         <div class="form-header">
             <h2>Registro de Produto</h2>
             <h3>Cadastre seu produto no formulário abaixo.</h3>
@@ -55,7 +55,7 @@
 
                 <div class="input-box">
                     <label class="checkbox-container">
-                        <input type="checkbox" name="checkbox" checked />
+                        <input type="checkbox" name="status" checked />
                         Produto Ativo?
                     </label>
                 </div>
@@ -73,7 +73,7 @@
                         <label for="price">Preço de venda (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="circle-dollar-sign"></i>
-                            <input id="price" name="price" type="text">
+                            <input id="price" name="price" type="number">
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@
                         <label for="promotional_price">Preço promocinal (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="badge-percent"></i>
-                            <input id="promotional_price" name="promotional_price" type="text">
+                            <input id="promotional_price" name="promotional_price" type="number">
                         </div>
                     </div>
 
@@ -89,7 +89,7 @@
                         <label for="cost">Custo (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="hand-coins"></i>
-                            <input id="cost" name="cost" type="text">
+                            <input id="cost" name="cost" type="number">
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <label for="width">Largura(cm) (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="pencil-ruler"></i>
-                            <input id="width" name="width" type="text">
+                            <input id="width" name="width" type="number">
                         </div>
                     </div>
 
@@ -107,7 +107,7 @@
                         <label for="height">Altura(cm) (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="pencil-ruler"></i>
-                            <input id="height" name="height" type="text">
+                            <input id="height" name="height" type="number">
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                         <label for="length">Comprimento(cm) (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="pencil-ruler"></i>
-                            <input id="length" name="length" type="text">
+                            <input id="length" name="length" type="number">
                         </div>
                     </div>
 
@@ -125,7 +125,7 @@
                         <label for="weight">Peso em kg (obrigatório)</label>
                         <div class="text-input">
                             <i data-lucide="weight"></i>
-                            <input id="weight" name="weight" type="text">
+                            <input id="weight" name="weight" type="number">
                         </div>
                     </div>
                 </div>
@@ -169,7 +169,7 @@
                         <label for="volumes">Quantidade de volumes (opcional)</label>
                         <div class="text-input">
                             <i data-lucide="boxes"></i>
-                            <input id="volumes" name="volumes" type="text">
+                            <input id="volumes" name="volumes" type="number">
                         </div>
                     </div>
 
@@ -227,8 +227,8 @@
                 <div class="input-box">
                     <label for="manufacturing">Fabricação (opcional)</label>
                     <div class="custom-select">
-                        <select id="manufacturing" name="status">
-                            <option>Selecionar</option>
+                        <select id="manufacturing" name="manufacturing">
+                            <option value="">Selecionar</option>
                             <option value="Nacional"><i data-lucide="map-pin-house"></i>Nacional</option>
                             <option value="Importado"><i data-lucide="plane-landing"></i>Importado</option>
                         </select>
@@ -243,17 +243,17 @@
                     <div class="attribute">
                         <div class="mult-inputs">
                             <div class="input-box">
-                                <label for="attribute[0]['key']">Chave</label>
+                                <label for="attribute[0][key]">Chave</label>
                                 <div class="text-input">
                                     <i data-lucide="key-square"></i>
-                                    <input id="attribute[0]['key']" name="attribute[0]['key']" type="text">
+                                    <input id="attribute[0][key]" name="attribute[0][key]" type="text">
                                 </div>
                             </div>
                             <div class="input-box">
-                                <label for="attribute[0]['value']">Valor</label>
+                                <label for="attribute[0][value]">Valor</label>
                                 <div class="text-input">
                                     <i data-lucide="whole-word"></i>
-                                    <input id="attribute[0]['value']" name="attribute[0]['value']" type="text">
+                                    <input id="attribute[0][value]" name="attribute[0][value]" type="text">
                                 </div>
                             </div>
                         </div>
@@ -291,7 +291,7 @@
                         <label for="variationQty">Quantidade em estoque</label>
                         <div class="text-input">
                             <i data-lucide="boxes"></i>
-                            <input id="variationQty" name="variations[0]['qty']" type="text">
+                            <input id="variationQty" name="variations[0]['qty']" type="number">
                         </div>
                     </div>
                     <div class="input-box">
@@ -323,7 +323,7 @@
                                     <label for="specificationKey1">Chave</label>
                                     <div class="text-input">
                                         <i data-lucide="key-square"></i>
-                                        <input id="specificationKey1" name="variations[0]['specifications'][0]['key']"
+                                        <input id="specificationKey1" name="variations[0][specifications][0][key]"
                                             type="text">
                                     </div>
                                 </div>
@@ -331,8 +331,8 @@
                                     <label for="specificationValue1">Valor</label>
                                     <div class="text-input">
                                         <i data-lucide="whole-word"></i>
-                                        <input id="specificationValue1"
-                                            name="variations[0]['specifications'][0]['value']" type="text">
+                                        <input id="specificationValue1" name="variations[0][specifications][0][value]"
+                                            type="text">
                                     </div>
                                 </div>
                             </div>

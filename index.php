@@ -18,8 +18,10 @@ $router->group(null);
 
 $router->get("/", 'WebController:home', 'app.home');
 
-$router->group('/produto');
-$router->get('/cadastro', 'ProductController:create', 'product.create');
+$router->group('/produtos');
+$router->get('/cadastro', 'ProductController:create', 'products.create');
+$router->post('/cadastro', 'ProductController:store', 'products.store');
+$router->get('/cadastro/sucesso', 'ProductController:sucess', 'products.sucess');
 
 $router->dispatch();
 

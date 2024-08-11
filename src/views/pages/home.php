@@ -10,7 +10,7 @@
             <h2>Teste com PHP para <br> <span>Desenvolvedor</span> Júnior</h2>
             <h3>By Gustavo Henrique</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, perferendis!</p>
-            <a href=<?= $router->route('product.create') ?> class="button button-primary">
+            <a href="<?= $router->route('products.create') ?>" class="button button-primary">
                 <i data-lucide="package-plus"></i>
                 Cadastrar Produto
             </a>
