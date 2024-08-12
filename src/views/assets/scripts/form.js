@@ -26,35 +26,14 @@ function hideErrors() {
 document.querySelector('form').addEventListener('click', hideErrors);
 
 // New attribute
-let btnNewAttribute = document.getElementById("new-attribute");
-btnNewAttribute.addEventListener('click', () => {
-    let attributes = document.querySelectorAll('#attributes-container .attribute');
+function newAttribute() {
+    let attributes = document.querySelectorAll("#attributes-container .attribute");
     let lastAttribute = attributes[attributes.length - 1];
-    let attributeIndex = +lastAttribute.attributes.id.value;
 
     let clone = lastAttribute.cloneNode(true);
-    let cloneIndex = attributeIndex + 1;
-    clone.attributes.id.value = cloneIndex;
-
-    // Attribute Key
-    let cloneKeyLabel = clone.querySelector('.key label');
-    let cloneKeyInput = clone.querySelector('.key input');
-
-    cloneKeyLabel.setAttribute("for", `attribute[${cloneIndex}][key]`);
-    cloneKeyInput.setAttribute("id", `attribute[${cloneIndex}][key]`);
-    cloneKeyInput.setAttribute("name", `attribute[${cloneIndex}][key]`);
-
-    // Attribute Value
-    let cloneValueLabel = clone.querySelector('.value label');
-    let cloneValueInput = clone.querySelector('.value input');
-
-    cloneValueLabel.setAttribute("for", `attribute[${cloneIndex}][value]`);
-    cloneValueInput.setAttribute("id", `attribute[${cloneIndex}][value]`);
-    cloneValueInput.setAttribute("name", `attribute[${cloneIndex}][value]`);
-
-    let attributesContainer = document.getElementById('attributes-container');
-    attributesContainer.appendChild(clone);
-});
+    let attributesContainer = document.querySelector('#attributes-container');
+    attributesContainer.append(clone);
+}
 
 // Remove Atrribute
 function destroyAttribute(btn) {
@@ -66,7 +45,6 @@ function destroyAttribute(btn) {
 function newVariation(params) {
     let variations = document.querySelectorAll('#variations-container .variation');
     let lastVariation = variations[variations.length - 1];
-    let variationIndex = +lastVariation.attributes.id.value;
 
     let clone = lastVariation.cloneNode(true);
 
@@ -110,6 +88,18 @@ function destroySpecification(btn) {
 
 //Map data on submit
 document.querySelector("form").addEventListener("submit", function (e) {
+    let attributes = document.querySelectorAll("#attributes-container .attribute");
+    attributes.forEach((attribute, attributeIndex) => {
+        let keyInput = attribute.querySelector("[name='attribute[][key]']");
+        let valueInput = attribute.querySelector("[name='attribute[][value]']");
+
+        console.log(keyInput, valueInput);
+
+
+        keyInput.setAttribute("name", `attribute[${attributeIndex}][key]`)
+        valueInput.setAttribute("name", `attribute[${attributeIndex}][value]`)
+    })
+
     let variations = document.querySelectorAll('#variations-container .variation');
     variations.forEach((variation, variationIndex) => {
         let skuInput = variation.querySelector("[name='variations[][sku]']");
@@ -117,10 +107,10 @@ document.querySelector("form").addEventListener("submit", function (e) {
         let qtyInput = variation.querySelector("[name='variations[][qty]']");
         let eanInput = variation.querySelector("[name='variations[][ean]']");
 
-        skuInput.setAttribute("name", `variations[${variationIndex}][sku]`)
-        refInput.setAttribute("name", `variations[${variationIndex}][ref]`)
-        qtyInput.setAttribute("name", `variations[${variationIndex}][qty]`)
-        eanInput.setAttribute("name", `variations[${variationIndex}][ean]`)
+        skuInput.setAttribute("name", `variations[${variationIndex}][sku]`);
+        refInput.setAttribute("name", `variations[${variationIndex}][ref]`);
+        qtyInput.setAttribute("name", `variations[${variationIndex}][qty]`);
+        eanInput.setAttribute("name", `variations[${variationIndex}][ean]`);
 
         let images = variation.querySelectorAll('.product-images .image');
         images.forEach((image, imageIndex) => {

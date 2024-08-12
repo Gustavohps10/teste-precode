@@ -274,7 +274,7 @@
                     <br>
 
                     <div class="controls">
-                        <button id="new-attribute" class="button button-tertiary sm" type="button"><i
+                        <button onclick="newAttribute()" class="button button-tertiary sm" type="button"><i
                                 data-lucide="plus"></i>Novo atributo</button>
                     </div>
                     <br>
@@ -312,18 +312,18 @@
                             <div id="0" class="attribute">
                                 <div class="mult-inputs">
                                     <div class="input-box key">
-                                        <label for="attribute[0][key]">Chave</label>
+                                        <label for="attribute[][key]">Chave</label>
                                         <div class="text-input">
                                             <i data-lucide="key-square"></i>
-                                            <input id="attribute[0][key]" name="attribute[0][key]" type="text"
+                                            <input id="attribute[][key]" name="attribute[][key]" type="text"
                                                 placeholder="Exemplo: Cor">
                                         </div>
                                     </div>
                                     <div class="input-box value">
-                                        <label for="attribute[0][value]">Valor</label>
+                                        <label for="attribute[][value]">Valor</label>
                                         <div class="text-input">
                                             <i data-lucide="whole-word"></i>
-                                            <input id="attribute[0][value]" name="attribute[0][value]" type="text"
+                                            <input id="attribute[][value]" name="attribute[][value]" type="text"
                                                 placeholder="Exemplo: Amendôa">
                                         </div>
                                     </div>
