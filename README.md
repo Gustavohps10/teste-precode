@@ -22,6 +22,9 @@ O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvid
 
 ## :gear: Rodando
 
+### Video da aplicação
+> Acesse aqui: 🎬 [Video](https://player.livepush.io/emvH4PeH_-_VG)
+ 
 ### Scripts PostgreSQL
 > Você pode acessar aqui: [scripts.sql](https://github.com/Gustavohps10/teste-precode/blob/main/scripts.sql)
 
