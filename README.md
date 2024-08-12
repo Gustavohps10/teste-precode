@@ -1,5 +1,5 @@
-<p align="center"><img height="70" src="./src/views/assets/images/precode-logo.png" /></p>
-<h1 align="center">Teste para Desenvolvedor Júnior</h1>
+
+<h1 align="center"><div align="center"><img height="70" src="./src/views/assets/images/precode-logo.png" /></div>Teste para Desenvolvedor Júnior</h1>
 
 <p align="center">
     <img src="https://img.shields.io/github/languages/top/Gustavohps10/teste-precode?label=PHP&color=009de1&style=flat-square&logo=php&logoColor=ffffff"/>
