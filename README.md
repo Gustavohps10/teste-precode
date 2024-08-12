@@ -18,7 +18,7 @@ O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvid
 - [x] Cadastrar Produto
 - [x] Criar querys no banco PostgreSQL
 - [ ] Ajustar responsividade
-- [ ] Conteinerização
+- [ ] Conteinerização com Docker
 
 ## :gear: Rodando
 
