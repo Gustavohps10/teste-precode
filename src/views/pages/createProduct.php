@@ -275,7 +275,7 @@
 
                     <div class="controls">
                         <button id="new-attribute" class="button button-tertiary sm" type="button"><i
-                                data-lucide="plus"></i>Novo</button>
+                                data-lucide="plus"></i>Novo atributo</button>
                     </div>
                     <br>
 
@@ -343,7 +343,7 @@
             </section>
 
             <section id="variations">
-                <h2>Variações do produto</h2>
+                <h2>Variações do produto (opcional)</h2>
                 <br>
 
                 <div id="1" class="variation">
@@ -382,19 +382,37 @@
 
                     <div class="product-images">
                         <h3>Imagens da variação (opcional)</h3>
-                        <div class="input-box">
-                            <label>Imagem 1</label>
-                            <div class="text-input">
-                                <i data-lucide="images"></i>
-                                <input name="variations[0][images][0]" type="text"
-                                    placeholder="Exemplo: https://www.seudominio.com.br/images/imagem.jpg">
-                            </div>
+                        <div class="controls">
+                            <button id="new-image" class="button button-tertiary sm" type="button"><i
+                                    data-lucide="image-plus"></i>Nova imagem</button>
                         </div>
+                        <br>
+
+                        <div class="mult-inputs">
+                            <div class="input-box">
+                                <label>Imagem 1</label>
+                                <div class="text-input">
+                                    <i data-lucide="images"></i>
+                                    <input name="variations[0][images][0]" type="text"
+                                        placeholder="Exemplo: https://www.seudominio.com.br/images/imagem.jpg">
+                                </div>
+                            </div>
+
+                            <button onclick="destroyImage(this)" id="0" class="button button-danger sm remove-attribute"
+                                type="button"><i data-lucide="trash-2"></i></button>
+                        </div>
+
 
                     </div>
 
                     <div class="specifications">
                         <h3>Especificações da variação (opcional)</h3>
+
+                        <div class="controls">
+                            <button id="new-specification" class="button button-tertiary sm" type="button"><i
+                                    data-lucide="plus"></i>Nova especificação</button>
+                        </div>
+                        <br>
 
                         <div class="specification">
                             <div class="mult-inputs">
@@ -414,6 +432,10 @@
                                             type="text" placeholder="Exemplo: Branco">
                                     </div>
                                 </div>
+
+                                <button onclick="destroySpecification(this)" id="0"
+                                    class="button button-danger sm remove-attribute" type="button"><i
+                                        data-lucide="trash-2"></i></button>
                             </div>
                         </div>
 
@@ -422,7 +444,8 @@
                 </div>
 
                 <br>
-                <button class="button button-secondary"> <i data-lucide="copy-plus"></i> Nova variação</button>
+                <button class="button button-secondary sm" type="button"> <i data-lucide="copy-plus"></i> Nova
+                    variação</button>
 
                 <br>
 

@@ -56,6 +56,12 @@ form .form-body section#variations {
     display: none;
 }
 
+.variation {
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 2px solid #dee2e6;
+}
+
 form h2 {
     font-weight: 600;
     color: #212121;
@@ -89,6 +95,10 @@ form hr {
     border-radius: 8px;
     min-width: 250px;
     padding-left: 0.5rem;
+}
+
+.text-input svg {
+    width: 20px;
 }
 
 .input-box input {
