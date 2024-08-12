@@ -346,105 +346,109 @@
                 <h2>Variações do produto (opcional)</h2>
                 <br>
 
-                <div id="1" class="variation">
-                    <div class="input-box">
-                        <label for="variationRef">Ref</label>
-                        <div class="text-input">
-                            <i data-lucide="barcode"></i>
-                            <input id="variationRef" name="variations[0][ref]" type="text"
-                                placeholder="Código alfanumérico de referência do sku, que pode ser o sku da loja/integradora">
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <label for="variationSku">SKU</label>
-                        <div class="text-input">
-                            <i data-lucide="barcode"></i>
-                            <input id="variationSku" name="variations[0][sku]" type="text"
-                                placeholder="Código sku da variação">
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <label for="variationQty">Quantidade em estoque</label>
-                        <div class="text-input">
-                            <i data-lucide="boxes"></i>
-                            <input id="variationQty" name="variations[0][qty]" type="number"
-                                placeholder="Quantidade em estoque">
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <label for="variationEan">Código EAN</label>
-                        <div class="text-input">
-                            <i data-lucide="scan-barcode"></i>
-                            <input id="variationEan" name="variations[0][ean]" type="text"
-                                placeholder="Código ean da variação">
-                        </div>
-                    </div>
-
-                    <div class="product-images">
-                        <h3>Imagens da variação (opcional)</h3>
-                        <div class="controls">
-                            <button id="new-image" class="button button-tertiary sm" type="button"><i
-                                    data-lucide="image-plus"></i>Nova imagem</button>
-                        </div>
-                        <br>
-
-                        <div class="mult-inputs">
-                            <div class="input-box">
-                                <label>Imagem 1</label>
-                                <div class="text-input">
-                                    <i data-lucide="images"></i>
-                                    <input name="variations[0][images][0]" type="text"
-                                        placeholder="Exemplo: https://www.seudominio.com.br/images/imagem.jpg">
-                                </div>
+                <div id="variations-container">
+                    <div id="0" class="variation">
+                        <div class="input-box">
+                            <label for="variationRef">Ref</label>
+                            <div class="text-input">
+                                <i data-lucide="barcode"></i>
+                                <input id="variationRef" name="variations[][ref]" type="text"
+                                    placeholder="Código alfanumérico de referência do sku, que pode ser o sku da loja/integradora">
                             </div>
-
-                            <button onclick="destroyImage(this)" id="0" class="button button-danger sm remove-attribute"
-                                type="button"><i data-lucide="trash-2"></i></button>
+                        </div>
+                        <div class="input-box">
+                            <label for="variationSku">SKU</label>
+                            <div class="text-input">
+                                <i data-lucide="barcode"></i>
+                                <input id="variationSku" name="variations[][sku]" type="text"
+                                    placeholder="Código sku da variação">
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <label for="variationQty">Quantidade em estoque</label>
+                            <div class="text-input">
+                                <i data-lucide="boxes"></i>
+                                <input id="variationQty" name="variations[][qty]" type="number"
+                                    placeholder="Quantidade em estoque">
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <label for="variationEan">Código EAN</label>
+                            <div class="text-input">
+                                <i data-lucide="scan-barcode"></i>
+                                <input id="variationEan" name="variations[][ean]" type="text"
+                                    placeholder="Código ean da variação">
+                            </div>
                         </div>
 
+                        <div class="product-images">
+                            <h3>Imagens da variação (opcional)</h3>
+                            <div class="controls">
+                                <button id="new-image" class="button button-tertiary sm" type="button"><i
+                                        data-lucide="image-plus"></i>Nova imagem</button>
+                            </div>
+                            <br>
 
-                    </div>
-
-                    <div class="specifications">
-                        <h3>Especificações da variação (opcional)</h3>
-
-                        <div class="controls">
-                            <button id="new-specification" class="button button-tertiary sm" type="button"><i
-                                    data-lucide="plus"></i>Nova especificação</button>
-                        </div>
-                        <br>
-
-                        <div class="specification">
-                            <div class="mult-inputs">
+                            <div class="image mult-inputs">
                                 <div class="input-box">
-                                    <label for="specificationKey1">Chave</label>
+                                    <label>Imagem 1</label>
                                     <div class="text-input">
-                                        <i data-lucide="key-square"></i>
-                                        <input id="specificationKey1" name="variations[0][specifications][0][key]"
-                                            type="text" placeholder="Exemplo: Cor">
-                                    </div>
-                                </div>
-                                <div class="input-box">
-                                    <label for="specificationValue1">Valor</label>
-                                    <div class="text-input">
-                                        <i data-lucide="whole-word"></i>
-                                        <input id="specificationValue1" name="variations[0][specifications][0][value]"
-                                            type="text" placeholder="Exemplo: Branco">
+                                        <i data-lucide="images"></i>
+                                        <input name="variations[][images][]" type="text"
+                                            placeholder="Exemplo: https://www.seudominio.com.br/images/imagem.jpg">
                                     </div>
                                 </div>
 
-                                <button onclick="destroySpecification(this)" id="0"
+                                <button onclick="destroyImage(this)" id="0"
                                     class="button button-danger sm remove-attribute" type="button"><i
                                         data-lucide="trash-2"></i></button>
                             </div>
+
+
+                        </div>
+
+                        <div class="specifications">
+                            <h3>Especificações da variação (opcional)</h3>
+
+                            <div class="controls">
+                                <button id="new-specification" class="button button-tertiary sm" type="button"><i
+                                        data-lucide="plus"></i>Nova especificação</button>
+                            </div>
+                            <br>
+
+                            <div class="specification">
+                                <div class="mult-inputs">
+                                    <div class="input-box">
+                                        <label for="specificationKey1">Chave</label>
+                                        <div class="text-input">
+                                            <i data-lucide="key-square"></i>
+                                            <input id="specificationKey1" name="variations[][specifications][][key]"
+                                                type="text" placeholder="Exemplo: Cor">
+                                        </div>
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="specificationValue1">Valor</label>
+                                        <div class="text-input">
+                                            <i data-lucide="whole-word"></i>
+                                            <input id="specificationValue1" name="variations[][specifications][][value]"
+                                                type="text" placeholder="Exemplo: Branco">
+                                        </div>
+                                    </div>
+
+                                    <button onclick="destroySpecification(this)" id="0"
+                                        class="button button-danger sm remove-attribute" type="button"><i
+                                            data-lucide="trash-2"></i></button>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
-
                 </div>
 
                 <br>
-                <button class="button button-secondary sm" type="button"> <i data-lucide="copy-plus"></i> Nova
+                <button onclick="newVariation()" class="button button-secondary sm" type="button"><i
+                        data-lucide="copy-plus"></i> Nova
                     variação</button>
 
                 <br>
@@ -459,69 +463,4 @@
     </form>
 </div>
 
-<?php $error = [] ?>
-
-<script>
-    function openSection(sectionName, tabActive) {
-        let sections = document.querySelectorAll('.form-body > section')
-        sections.forEach(section => {
-            section.style.display = 'none';
-        })
-
-        let activeSection = document.getElementById(sectionName);
-        activeSection.style.display = 'block';
-
-        let tabs = document.querySelectorAll(".tab");
-        tabs.forEach(tab => {
-            tab.classList.remove("active");
-        });
-
-        document.querySelector(`.tab#${tabActive}`).classList.add("active");
-        window.scrollTo(0, 0);
-
-    }
-
-    function hideErrors() {
-        let errorContainer = document.querySelector('.error-container');
-        if (errorContainer) errorContainer.style.display = 'none'
-    }
-
-    document.querySelector('form').addEventListener('click', hideErrors);
-
-    // New attribute
-    let btnNewAttribute = document.getElementById("new-attribute");
-    btnNewAttribute.addEventListener('click', () => {
-        let attributes = document.querySelectorAll('#attributes-container .attribute');
-        let lastAttribute = attributes[attributes.length - 1];
-        let attributeIndex = +lastAttribute.attributes.id.value;
-
-        let clone = lastAttribute.cloneNode(true);
-        let cloneIndex = attributeIndex + 1;
-        clone.attributes.id.value = cloneIndex;
-
-        // Attribute Key
-        let cloneKeyLabel = clone.querySelector('.key label');
-        let cloneKeyInput = clone.querySelector('.key input');
-
-        cloneKeyLabel.setAttribute("for", `attribute[${cloneIndex}][key]`);
-        cloneKeyInput.setAttribute("id", `attribute[${cloneIndex}][key]`);
-        cloneKeyInput.setAttribute("name", `attribute[${cloneIndex}][key]`);
-
-        // Attribute Value
-        let cloneValueLabel = clone.querySelector('.value label');
-        let cloneValueInput = clone.querySelector('.value input');
-
-        cloneValueLabel.setAttribute("for", `attribute[${cloneIndex}][value]`);
-        cloneValueInput.setAttribute("id", `attribute[${cloneIndex}][value]`);
-        cloneValueInput.setAttribute("name", `attribute[${cloneIndex}][value]`);
-
-        let attributesContainer = document.getElementById('attributes-container');
-        attributesContainer.appendChild(clone);
-    });
-
-    // Remove Atrribute
-    function destroyAttribute(btn) {
-        let attribute = btn.closest(".attribute");
-        attribute.remove();
-    } 
-</script>
+<script src="<?= url("src/views/assets/scripts/form.js") ?>"></script>
