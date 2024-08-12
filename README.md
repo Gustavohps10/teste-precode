@@ -14,10 +14,10 @@
 O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvido uma tela (HTML / CSS) em que possa ser preenchido dos dados do produto e disparar o formulário, fazendo uma requisição na API enviando os dados, capturando a resposta e mostrando na tela qual o retorno (sucesso ou erro).
 > ❗ Não foi utilizado nenhum framework robusto como Laravel ou CodeIgniter, apenas o [Coffeecode Router](https://packagist.org/packages/coffeecode/router) para lidar com roteamento e requisições e o [PlatesPHP](https://platesphp.com/) para criar templates. Também não foi utilizado nenhum framework css como Tailwind ou Bootstrap, apenas CSS e JavaScript puro.
 
-#### :clapper: Video da aplicação
+##### :clapper: Video da aplicação
 > Acesse aqui: [Video](https://player.livepush.io/emvH4PeH_-_VG)
  
-#### :mag_right: Scripts PostgreSQL
+##### :mag_right: Scripts PostgreSQL
 > Você pode acessar aqui: [scripts.sql](https://github.com/Gustavohps10/teste-precode/blob/main/scripts.sql)
 
 ## :dart: Tarefas
@@ -52,7 +52,7 @@ composer install
 
 ### Iniciando servidor Apache
 Abra o XAMPP e inicie o Apache
->⚠️ Certifique-se de que o projeto esteja na sua pasta `htdocs`
+> Certifique-se de que o projeto esteja na sua pasta `htdocs`
 
 ## :hammer_and_wrench: Ferramentas utilizadas
 <p>
