@@ -12,13 +12,16 @@
 
 ## :page_with_curl: Descrição
 O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvido uma tela (HTML / CSS) em que possa ser preenchido dos dados do produto e disparar o formulário, fazendo uma requisição na API enviando os dados, capturando a resposta e mostrando na tela qual o retorno (sucesso ou erro).
-> ❗ Não foi utilizado nenhum framework robusto como Laravel ou CodeIgniter, apenas o [Coffeecode Router](https://packagist.org/packages/coffeecode/router) para roteamento e o [Plates](https://platesphp.com/) para lidar com templates. Também não foi utilizado nenhum framework css como Tailwind ou Bootstrap, apenas CSS e JavaScript puro.
+> ❗ Não foi utilizado nenhum framework robusto como Laravel ou CodeIgniter, apenas o [Coffeecode Router](https://packagist.org/packages/coffeecode/router) para lidar com roteamento e requisições e o [PlatesPHP](https://platesphp.com/) para criar templates. Também não foi utilizado nenhum framework css como Tailwind ou Bootstrap, apenas CSS e JavaScript puro.
 
-## 📌: Tarefas
+## :pushpin: Tarefas
 - [x] Cadastrar Produto
 - [x] Criar querys no banco PostgreSQL
 
 ## :gear: Rodando
+
+### Scripts PostgreSQL
+> Você pode acessar aqui: [scripts.sql](https://github.com/Gustavohps10/teste-precode/blob/main/scripts.sql)
 
 ### Variáveis de ambiente
 Crie uma cópia do arquivo ```.env.example``` como ```.env```
