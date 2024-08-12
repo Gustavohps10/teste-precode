@@ -1,3 +1,4 @@
+<p align="center"><img height="70" src="./src/views/assets/images/precode-logo.png" /></p>
 <h1 align="center">Teste para Desenvolvedor Júnior</h1>
 
 <p align="center">
@@ -10,7 +11,7 @@
 <p align="center"><img width="100%" src=".github/screenshot.png"></p>
 
 ## :page_with_curl: Descrição
-O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvido uma tela (HTML / CSS) em que possa ser preenchido dos dados do produto e ao disparar o formulário, fzendo uma requisição na API enviando os dados do produto, capturando a resposta e mostrando na tela qual o retorno (sucesso ou erro).
+O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvido uma tela (HTML / CSS) em que possa ser preenchido dos dados do produto e disparar o formulário, fazendo uma requisição na API enviando os dados, capturando a resposta e mostrando na tela qual o retorno (sucesso ou erro).
 
 ## :game_die: Tarefas
 - [x] Cadastrar Produto
