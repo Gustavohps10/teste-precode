@@ -21,7 +21,7 @@ O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvid
 - [ ] Conteinerização com Docker
 
 ## :pushpin: Requisitos
-- [XAMPP](https://www.apachefriends.org/pt_br/download.html) (necessário servidor Apache para o roteamento funcionar)
+- [XAMPP (PHP 8.0.30)](https://www.apachefriends.org/pt_br/download.html) (necessário servidor Apache para o roteamento funcionar)
 - [Composer](https://getcomposer.org/download/)
 
 ## :gear: Rodando
@@ -44,7 +44,7 @@ Defina a variável `PRECODE_API_TOKEN`
 composer install
 ```
 
-## :hammer_and_wrench: Tools
+## :hammer_and_wrench: Ferramentas utilizadas
 <p>
   <img src="https://img.shields.io/static/v1?label=&message=PHP 8.3&colorA=2a2a2a&colorB=1a1a1e&logo=php&style=flat-square">
   <img src="https://img.shields.io/static/v1?label=&message=Composer&colorA=2a2a2a&colorB=1a1a1e&logo=composer&style=flat-square">
