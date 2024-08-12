@@ -43,7 +43,6 @@ class ProductController extends Controller
 
         echo $this->view->render('createProduct', [
             "error" => $error,
-            "data" => $data
         ]);
     }
 
