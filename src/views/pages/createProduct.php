@@ -412,33 +412,36 @@
                             <h3>Especificações da variação (opcional)</h3>
 
                             <div class="controls">
-                                <button id="new-specification" class="button button-tertiary sm" type="button"><i
-                                        data-lucide="plus"></i>Nova especificação</button>
+                                <button onclick="newSpec(this)" id="new-specification" class="button button-tertiary sm"
+                                    type="button"><i data-lucide="plus"></i>Nova especificação</button>
                             </div>
                             <br>
 
-                            <div class="specification">
-                                <div class="mult-inputs">
-                                    <div class="input-box">
-                                        <label for="specificationKey1">Chave</label>
-                                        <div class="text-input">
-                                            <i data-lucide="key-square"></i>
-                                            <input id="specificationKey1" name="variations[][specifications][][key]"
-                                                type="text" placeholder="Exemplo: Cor">
+                            <div class="specifications-container">
+                                <div class="specification">
+                                    <div class="mult-inputs">
+                                        <div class="input-box">
+                                            <label for="specificationKey1">Chave</label>
+                                            <div class="text-input">
+                                                <i data-lucide="key-square"></i>
+                                                <input id="specificationKey1" name="variations[][specifications][][key]"
+                                                    type="text" placeholder="Exemplo: Cor">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="input-box">
-                                        <label for="specificationValue1">Valor</label>
-                                        <div class="text-input">
-                                            <i data-lucide="whole-word"></i>
-                                            <input id="specificationValue1" name="variations[][specifications][][value]"
-                                                type="text" placeholder="Exemplo: Branco">
+                                        <div class="input-box">
+                                            <label for="specificationValue1">Valor</label>
+                                            <div class="text-input">
+                                                <i data-lucide="whole-word"></i>
+                                                <input id="specificationValue1"
+                                                    name="variations[][specifications][][value]" type="text"
+                                                    placeholder="Exemplo: Branco">
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <button onclick="destroySpecification(this)" id="0"
-                                        class="button button-danger sm remove-attribute" type="button"><i
-                                            data-lucide="trash-2"></i></button>
+                                        <button onclick="destroySpecification(this)" id="0"
+                                            class="button button-danger sm remove-attribute" type="button"><i
+                                                data-lucide="trash-2"></i></button>
+                                    </div>
                                 </div>
                             </div>
 

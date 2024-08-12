@@ -87,8 +87,25 @@ function newImage(btnNewImage) {
 
 // Remove Image
 function destroyImage(btn) {
-    let attribute = btn.closest(".image");
-    attribute.remove();
+    let image = btn.closest(".image");
+    image.remove();
+}
+
+//New Spec
+function newSpec(btnNewSpec) {
+    let variation = btnNewSpec.closest(".variation")
+    let specifications = variation.querySelectorAll('.specifications .specification');
+    let lastspecification = specifications[specifications.length - 1];
+
+    let clone = lastspecification.cloneNode(true);
+    let specificationsContainer = variation.querySelector('.specifications-container');
+    specificationsContainer.append(clone);
+}
+
+//Remove Spec
+function destroySpecification(btn) {
+    let spec = btn.closest(".specification");
+    spec.remove();
 }
 
 //Map data on submit
