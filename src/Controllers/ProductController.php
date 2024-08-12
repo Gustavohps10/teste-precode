@@ -34,8 +34,7 @@ class ProductController extends Controller
         $response = $productManagement->createProduct($data)->callback();
 
         if (isset($response["message"]) && $response["message"] == "sucesso") {
-            echo "Sucesso";
-            // $this->router->redirect("products.sucess");
+            $this->router->redirect("products.success");
             return;
         }
 
@@ -48,8 +47,8 @@ class ProductController extends Controller
         ]);
     }
 
-    public function sucess()
+    public function success()
     {
-        echo 'Sucesso';
+        echo $this->view->render('success');
     }
 }
