@@ -14,7 +14,7 @@
 O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvido uma tela (HTML / CSS) em que possa ser preenchido dos dados do produto e disparar o formulário, fazendo uma requisição na API enviando os dados, capturando a resposta e mostrando na tela qual o retorno (sucesso ou erro).
 > ❗ Não foi utilizado nenhum framework robusto como Laravel ou CodeIgniter, apenas o [Coffeecode Router](https://packagist.org/packages/coffeecode/router) para roteamento e o [Plates](https://platesphp.com/) para lidar com templates. Também não foi utilizado nenhum framework css como Tailwind ou Bootstrap, apenas CSS e JavaScript puro.
 
-## :game_die: Tarefas
+## 📌: Tarefas
 - [x] Cadastrar Produto
 - [x] Criar querys no banco PostgreSQL
 
@@ -23,7 +23,7 @@ O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvid
 ### Variáveis de ambiente
 Crie uma cópia do arquivo ```.env.example``` como ```.env```
 ```
-copy .env.example .env.local
+copy .env.example .env
 ```
 
 ### Instalar Dependências
