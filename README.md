@@ -16,7 +16,7 @@ O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvid
 
 ## :dart: Tarefas
 - [x] Cadastrar Produto
-- [x] Criar querys no banco PostgreSQL
+- [x] Criar consultas no banco PostgreSQL
 - [ ] Ajustar responsividade
 - [ ] Conteinerização com Docker
 
