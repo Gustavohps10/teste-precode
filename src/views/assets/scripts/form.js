@@ -74,8 +74,24 @@ function newVariation(params) {
     variationsContainer.appendChild(clone);
 }
 
+//New Image
+function newImage(btnNewImage) {
+    let variation = btnNewImage.closest(".variation")
+    let images = variation.querySelectorAll('.product-images .image');
+    let lastImage = images[images.length - 1];
 
+    let clone = lastImage.cloneNode(true);
+    let imagesContainer = variation.querySelector('.images-container');
+    imagesContainer.append(clone);
+}
 
+// Remove Image
+function destroyImage(btn) {
+    let attribute = btn.closest(".image");
+    attribute.remove();
+}
+
+//Map data on submit
 document.querySelector("form").addEventListener("submit", function (e) {
     let variations = document.querySelectorAll('#variations-container .variation');
     variations.forEach((variation, variationIndex) => {

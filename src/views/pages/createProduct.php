@@ -384,26 +384,27 @@
                         <div class="product-images">
                             <h3>Imagens da variação (opcional)</h3>
                             <div class="controls">
-                                <button id="new-image" class="button button-tertiary sm" type="button"><i
-                                        data-lucide="image-plus"></i>Nova imagem</button>
+                                <button onclick="newImage(this)" id="new-image" class="button button-tertiary sm"
+                                    type="button"><i data-lucide="image-plus"></i>Nova imagem</button>
                             </div>
                             <br>
 
-                            <div class="image mult-inputs">
-                                <div class="input-box">
-                                    <label>Imagem 1</label>
-                                    <div class="text-input">
-                                        <i data-lucide="images"></i>
-                                        <input name="variations[][images][]" type="text"
-                                            placeholder="Exemplo: https://www.seudominio.com.br/images/imagem.jpg">
+                            <div class="images-container">
+                                <div class="image mult-inputs">
+                                    <div class="input-box">
+                                        <label>Imagem</label>
+                                        <div class="text-input">
+                                            <i data-lucide="images"></i>
+                                            <input name="variations[][images][]" type="text"
+                                                placeholder="Exemplo: https://www.seudominio.com.br/images/imagem.jpg">
+                                        </div>
                                     </div>
+
+                                    <button onclick="destroyImage(this)" id="0"
+                                        class="button button-danger sm remove-attribute" type="button"><i
+                                            data-lucide="trash-2"></i></button>
                                 </div>
-
-                                <button onclick="destroyImage(this)" id="0"
-                                    class="button button-danger sm remove-attribute" type="button"><i
-                                        data-lucide="trash-2"></i></button>
                             </div>
-
 
                         </div>
 
