@@ -18,17 +18,17 @@ class ProductController extends Controller
 
     public function store($data)
     {
-        $data["sku"] = (int) $data["sku"];
+        $data["sku"] = (int) $data["sku"] ??= 0;
         $data["price"] = (float) $data["price"];
-        $data["promotional_price"] = (float) $data["promotional_price"];
+        $data["promotional_price"] = (float) $data["promotional_price"] ??= 0;
         $data["status"] = isset($data["status"]) ? "enabled" : "disabled";
-        $data["cost"] = (float) $data["cost"];
-        $data["weight"] = (float) $data["weight"];
-        $data["width"] = (float) $data["width"];
-        $data["height"] = (float) $data["height"];
-        $data["length"] = (float) $data["length"];
-        $data["volumes"] = (float) $data["volumes"];
-        $data["warrantyTime"] = (int) $data["warrantyTime"];
+        $data["cost"] = (float) $data["cost"] ??= 0;
+        $data["weight"] = (float) $data["weight"] ??= 0;
+        $data["width"] = (float) $data["width"] ??= 0;
+        $data["height"] = (float) $data["height"] ??= 0;
+        $data["length"] = (float) $data["length"] ??= 0;
+        $data["volumes"] = (float) $data["volumes"] ??= 0;
+        $data["warrantyTime"] = (int) $data["warrantyTime"] ??= 0;
 
         $productManagement = new ProductManagement();
         $response = $productManagement->createProduct($data)->callback();

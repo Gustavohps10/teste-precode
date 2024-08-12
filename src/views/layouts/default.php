@@ -100,6 +100,8 @@
     <script>
         lucide.createIcons();
     </script>
+
+    <?= $this->section('scripts') ?>
 </body>
 
 </html>

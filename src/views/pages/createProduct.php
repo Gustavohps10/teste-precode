@@ -467,4 +467,6 @@
     </form>
 </div>
 
+<?php $this->start('scripts') ?>
 <script src="<?= url("src/views/assets/scripts/form.js") ?>"></script>
+<?php $this->stop() ?>

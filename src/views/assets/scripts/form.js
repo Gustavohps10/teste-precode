@@ -1,3 +1,9 @@
+// Clones
+const attributeClone = document.querySelectorAll("#attributes-container .attribute")[0].cloneNode(true);
+const variationClone = document.querySelectorAll('#variations-container .variation')[0].cloneNode(true);
+const imageClone = document.querySelectorAll('.product-images .image')[0].cloneNode(true);
+const specClone = document.querySelectorAll('.specifications .specification')[0].cloneNode(true);
+
 // Change Tabs
 function openSection(sectionName, tabActive) {
     let sections = document.querySelectorAll('.form-body > section')
@@ -27,10 +33,8 @@ document.querySelector('form').addEventListener('click', hideErrors);
 
 // New attribute
 function newAttribute() {
-    let attributes = document.querySelectorAll("#attributes-container .attribute");
-    let lastAttribute = attributes[attributes.length - 1];
+    let clone = attributeClone.cloneNode(true);
 
-    let clone = lastAttribute.cloneNode(true);
     let attributesContainer = document.querySelector('#attributes-container');
     attributesContainer.append(clone);
 }
@@ -42,23 +46,16 @@ function destroyAttribute(btn) {
 }
 
 //New Variation
-function newVariation(params) {
-    let variations = document.querySelectorAll('#variations-container .variation');
-    let lastVariation = variations[variations.length - 1];
-
-    let clone = lastVariation.cloneNode(true);
-
+function newVariation() {
+    let clone = variationClone.cloneNode(true);
     let variationsContainer = document.getElementById('variations-container');
     variationsContainer.appendChild(clone);
 }
 
 //New Image
 function newImage(btnNewImage) {
-    let variation = btnNewImage.closest(".variation")
-    let images = variation.querySelectorAll('.product-images .image');
-    let lastImage = images[images.length - 1];
-
-    let clone = lastImage.cloneNode(true);
+    let clone = imageClone.cloneNode(true);
+    let variation = btnNewImage.closest(".variation");
     let imagesContainer = variation.querySelector('.images-container');
     imagesContainer.append(clone);
 }
@@ -71,11 +68,8 @@ function destroyImage(btn) {
 
 //New Spec
 function newSpec(btnNewSpec) {
-    let variation = btnNewSpec.closest(".variation")
-    let specifications = variation.querySelectorAll('.specifications .specification');
-    let lastspecification = specifications[specifications.length - 1];
-
-    let clone = lastspecification.cloneNode(true);
+    let clone = specClone.cloneNode(true);
+    let variation = btnNewSpec.closest(".variation");
     let specificationsContainer = variation.querySelector('.specifications-container');
     specificationsContainer.append(clone);
 }
