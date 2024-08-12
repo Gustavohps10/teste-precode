@@ -14,11 +14,15 @@
 O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvido uma tela (HTML / CSS) em que possa ser preenchido dos dados do produto e disparar o formulário, fazendo uma requisição na API enviando os dados, capturando a resposta e mostrando na tela qual o retorno (sucesso ou erro).
 > ❗ Não foi utilizado nenhum framework robusto como Laravel ou CodeIgniter, apenas o [Coffeecode Router](https://packagist.org/packages/coffeecode/router) para lidar com roteamento e requisições e o [PlatesPHP](https://platesphp.com/) para criar templates. Também não foi utilizado nenhum framework css como Tailwind ou Bootstrap, apenas CSS e JavaScript puro.
 
-## :pushpin: Tarefas
+## :dart: Tarefas
 - [x] Cadastrar Produto
 - [x] Criar querys no banco PostgreSQL
 - [ ] Ajustar responsividade
 - [ ] Conteinerização com Docker
+
+## :pushpin: Requisitos
+- [XAMPP](https://www.apachefriends.org/pt_br/download.html) (necessário servidor Apache para o roteamento funcionar)
+- [Composer](https://getcomposer.org/download/)
 
 ## :gear: Rodando
 
@@ -33,6 +37,7 @@ Crie uma cópia do arquivo ```.env.example``` como ```.env```
 ```
 copy .env.example .env
 ```
+Defina a variável `PRECODE_API_TOKEN`
 
 ### Instalar Dependências
 ```
@@ -43,10 +48,12 @@ composer install
 <p>
   <img src="https://img.shields.io/static/v1?label=&message=PHP 8.3&colorA=2a2a2a&colorB=1a1a1e&logo=php&style=flat-square">
   <img src="https://img.shields.io/static/v1?label=&message=Composer&colorA=2a2a2a&colorB=1a1a1e&logo=composer&style=flat-square">
+  <img src="https://img.shields.io/static/v1?label=&message=XAMPP&colorA=2a2a2a&colorB=1a1a1e&logo=xampp&style=flat-square">
   <img src="https://img.shields.io/static/v1?label=&message=HTML&colorA=2a2a2a&colorB=1a1a1e&logo=html5&style=flat-square">
   <img src="https://img.shields.io/static/v1?label=&message=CSS&colorA=2a2a2a&colorB=1a1a1e&logo=css3&style=flat-square">
   <img src="https://img.shields.io/static/v1?label=&message=JavaScript&colorA=2a2a2a&colorB=1a1a1e&logo=javascript&style=flat-square">
   <img src="https://img.shields.io/static/v1?label=&message=PostgreSQL&colorA=2a2a2a&colorB=1a1a1e&logo=postgresql&style=flat-square">
+  <img src="https://img.shields.io/static/v1?label=&message=Insomnia&colorA=2a2a2a&colorB=1a1a1e&logo=insomnia&style=flat-square">
 </p>
 
 ## :adult: Autores
