@@ -53,13 +53,13 @@
 }
 
 .button.button-danger {
-    color: #fff;
-    background-color: #db7272;
+    color: #e85d5d;
+    background-color: #f5eaea;
 }
 
 
 .button.button-danger:hover {
-    background-color: #df5d5d;
+    background-color: #e0c1c1;
 }
 
 
