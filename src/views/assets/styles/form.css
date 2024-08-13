@@ -141,6 +141,10 @@ textarea:focus,
     border-color: var(--blue-500) !important;
 }
 
+.text-input:focus-within svg {
+    color: var(--blue-600)
+}
+
 .checkbox-container {
     font-size: 1rem;
     font-weight: bold;
