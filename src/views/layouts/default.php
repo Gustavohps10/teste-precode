@@ -19,15 +19,17 @@
 
 <body>
     <header class="header">
-        <div class="logo"><img src=<?= url("src/views/assets/images/precode-logo.png") ?> alt=""></div>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li class="active"><a href="">Sobre</a></li>
-                <li><a href="">Contato</a></li>
-                <li><a href="">Github</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo"><img src=<?= url("src/views/assets/images/precode-logo.png") ?> alt=""></div>
+            <nav>
+                <ul>
+                    <li><a href="<?= $router->route("app.home") ?>">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="">Github</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="content">

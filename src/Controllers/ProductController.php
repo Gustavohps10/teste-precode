@@ -28,7 +28,7 @@ class ProductController extends Controller
         $productManagement = new ProductManagement();
         $createProductSchema = (object) ['$ref' => 'file://' . dirname(__FILE__) . '/../Support/schemas/createProductSchema.json'];
 
-        //Check if input is valid
+        //Check if input is valid and convert data types
         if (!$productManagement->schemaIsValid($data, $createProductSchema)) {
             $_SESSION["error"] = $error;
 

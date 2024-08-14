@@ -4,12 +4,12 @@
 <link rel="stylesheet" href=<?= url("src/views/assets/styles/home.css") ?>>
 <?php $this->stop() ?>
 
-<main>
+<main class="container">
     <aside>
         <div class="presentation-text">
             <h2>Teste com PHP para <br> <span>Desenvolvedor</span> Júnior</h2>
             <h3>By Gustavo Henrique</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, perferendis!</p>
+            <p>Tete para cadastro de produto feito com PHP + HTML + CSS + JS</p>
             <a href="<?= $router->route('products.create') ?>" class="button button-primary">
                 <i data-lucide="package-plus"></i>
                 Cadastrar Produto

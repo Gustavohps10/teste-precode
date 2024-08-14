@@ -1,10 +1,12 @@
-.header {
-    padding: 1.5rem 4rem;
+.header .container {
+    position: relative;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1.5rem 4rem;
     background-color: #fbfbfb;
-    box-shadow: 2 2 8 #212121;
+    box-shadow: 2px 2px 8px #2121211a;
     color: #1a1a1e;
 }
 
@@ -33,7 +35,6 @@
     font-size: 1.25rem;
     font-weight: 600;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
 }
 
 .header nav ul li a:after {
@@ -45,6 +46,10 @@
     left: 0;
     background-color: var(--blue-500);
     transition: all .2s ease;
+}
+
+.header nav ul li a.active {
+    border-bottom: 4px solid var(--blue-500);
 }
 
 .header nav ul li a:hover::after {
