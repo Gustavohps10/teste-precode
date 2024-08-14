@@ -4,6 +4,8 @@
 <link rel="stylesheet" href=<?= url("src/views/assets/styles/form.css") ?>>
 <?php $this->stop() ?>
 
+<?php $error = $_SESSION["error"] ?? [] ?>
+
 <div class="container">
     <form action="<?= $router->route("products.store"); ?>" method="post" autocomplete="off" novalidate>
         <div class="form-header">
@@ -20,10 +22,10 @@
 
         <div class="form-body">
             <?php
-            if (isset($error)): ?>
+            if (!empty($error)): ?>
                 <div class="error-container">
                     <i data-lucide="shield-alert"></i>
-                    <?= $error["message"] ?>
+                    <?= $error["message"] ?? '' ?>
                 </div>
             <?php endif ?>
 
@@ -470,3 +472,5 @@
 <?php $this->start('scripts') ?>
 <script src="<?= url("src/views/assets/scripts/form.js") ?>"></script>
 <?php $this->stop() ?>
+
+<?php $_SESSION["error"] = [] ?>

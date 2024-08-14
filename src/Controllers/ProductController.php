@@ -22,25 +22,29 @@ class ProductController extends Controller
         $data["status"] = isset($data["status"]) ? "enabled" : "disabled";
         $data = json_decode(json_encode($data), false);
 
+        // Default error message
         $error["message"] = "Falha ao cadastrar. Ocorreu um erro inesperado!";
 
         $productManagement = new ProductManagement();
         $createProductSchema = (object) ['$ref' => 'file://' . dirname(__FILE__) . '/../Support/schemas/createProductSchema.json'];
 
+        //Check if input is valid
         if (!$productManagement->schemaIsValid($data, $createProductSchema)) {
-            echo $this->view->render('createProduct', [
-                "error" => $error,
-            ]);
+            $_SESSION["error"] = $error;
+
+            $this->router->redirect('products.create');
+            return;
         }
 
+        //Check if the product was created
         $response = $productManagement->createProduct($data)->callback();
 
         if (!isset($response["message"]) || $response["message"] != "sucesso") {
             $error["message"] = $response["message"] ?? $error["message"];
             $error["code"] = $response["code"] ?? null;
-            echo $this->view->render('createProduct', [
-                "error" => $error,
-            ]);
+            $_SESSION["error"] = $error;
+
+            $this->router->redirect('products.create');
             return;
         }
 
