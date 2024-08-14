@@ -1,0 +1,246 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "sku": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "default": 0
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "shortName": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        },
+        "wordKeys": {
+            "type": "string"
+        },
+        "price": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "default": 0
+        },
+        "promotional_price": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "default": 0
+        },
+        "cost": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "default": 0
+        },
+        "weight": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "default": 0
+        },
+        "width": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "default": 0
+        },
+        "height": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "default": 0
+        },
+        "length": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "default": 0
+        },
+        "brand": {
+            "type": "string"
+        },
+        "urlYoutube": {
+            "type": "string"
+        },
+        "googleDescription": {
+            "type": "string"
+        },
+        "manufacturing": {
+            "type": "string"
+        },
+        "nbm": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "gender": {
+            "type": "string"
+        },
+        "volumes": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "default": 0
+        },
+        "warrantyTime": {
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "category": {
+            "type": "string"
+        },
+        "subcategory": {
+            "type": "string"
+        },
+        "endcategory": {
+            "type": "string"
+        },
+        "attribute": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Attribute"
+            }
+        },
+        "variations": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Variation"
+            }
+        }
+    },
+    "required": [
+        "attribute",
+        "brand",
+        "category",
+        "cost",
+        "description",
+        "endcategory",
+        "gender",
+        "googleDescription",
+        "height",
+        "length",
+        "manufacturing",
+        "model",
+        "name",
+        "nbm",
+        "price",
+        "promotional_price",
+        "shortName",
+        "sku",
+        "status",
+        "subcategory",
+        "urlYoutube",
+        "variations",
+        "volumes",
+        "warrantyTime",
+        "weight",
+        "width",
+        "wordKeys"
+    ],
+    "definitions": {
+        "Specification": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "key",
+                "value"
+            ],
+            "title": "Specification"
+        },
+        "Attribute": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "key",
+                "value"
+            ],
+            "title": "Attribute"
+        },
+        "Variation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ref": {
+                    "type": "string"
+                },
+                "sku": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "default": 0
+                },
+                "qty": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "default": 0
+                },
+                "ean": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "specifications": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Specification"
+                    }
+                }
+            },
+            "required": [
+                "ean",
+                "qty",
+                "ref",
+                "sku",
+                "specifications"
+            ],
+            "title": "Variation"
+        }
+    }
+}
