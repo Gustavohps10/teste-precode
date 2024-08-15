@@ -130,33 +130,18 @@
         }
     },
     "required": [
-        "attribute",
-        "brand",
-        "category",
-        "cost",
-        "description",
-        "endcategory",
-        "gender",
-        "googleDescription",
-        "height",
-        "length",
-        "manufacturing",
-        "model",
         "name",
-        "nbm",
+        "status",
+        "description",
+        "brand",
         "price",
         "promotional_price",
-        "shortName",
-        "sku",
-        "status",
-        "subcategory",
-        "urlYoutube",
-        "variations",
-        "volumes",
-        "warrantyTime",
-        "weight",
+        "cost",
         "width",
-        "wordKeys"
+        "weight",
+        "length",
+        "height",
+        "variations"
     ],
     "definitions": {
         "Specification": {
@@ -233,13 +218,6 @@
                     }
                 }
             },
-            "required": [
-                "ean",
-                "qty",
-                "ref",
-                "sku",
-                "specifications"
-            ],
             "title": "Variation"
         }
     }
