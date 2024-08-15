@@ -29,8 +29,19 @@
                     <li><a href="">Github</a></li>
                 </ul>
             </nav>
+            <i class="open-sidebar" onclick="openSidebar()" data-lucide="align-justify"></i>
         </div>
     </header>
+
+    <div class="sidebar">
+        <i class="close-sidebar" onclick="closeSidebar()" data-lucide="x"></i>
+        <ul>
+            <li><a href="#"><i data-lucide="house"></i>Home</a></li>
+            <li><a href="#"><i data-lucide="info"></i>Sobre</a></li>
+            <li><a href="#"><i data-lucide="phone"></i>Contato</a></li>
+            <li><a href="#"><i data-lucide="github"></i>Github</a></li>
+        </ul>
+    </div>
 
     <div class="content">
         <?= $this->section('content') ?>

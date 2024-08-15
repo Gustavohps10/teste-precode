@@ -7,5 +7,14 @@ window.addEventListener("scroll", (event) => {
     }
 
     header.classList.remove("active")
-
 });
+
+let sidebar = document.querySelector(".sidebar");
+
+function openSidebar() {
+    sidebar.classList.add("active")
+}
+
+function closeSidebar() {
+    sidebar.classList.remove("active")
+}
