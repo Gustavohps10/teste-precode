@@ -1,12 +1,20 @@
-.header .container {
-    position: relative;
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 9999;
+    background-color: #fbfbfb;
+}
+
+.header.active {
+    box-shadow: 8px 8px 16px #2121213b
+}
+
+.header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 4rem;
-    background-color: #fbfbfb;
-    box-shadow: 2px 2px 8px #2121211a;
     color: #1a1a1e;
 }
 

@@ -7,9 +7,9 @@
 <main class="container">
     <aside>
         <div class="presentation-text">
-            <h2>Teste com PHP para <br> <span>Desenvolvedor</span> Júnior</h2>
+            <h2>Teste com PHP para <br> <span>Desenvolvedor Júnior</span></h2>
             <h3>By Gustavo Henrique</h3>
-            <p>Tete para cadastro de produto feito com PHP + HTML + CSS + JS</p>
+            <p>Cadastro de produto feito com PHP + HTML + CSS + JS e consultas no banco de dados PostgreSQL</p>
             <a href="<?= $router->route('products.create') ?>" class="button button-primary">
                 <i data-lucide="package-plus"></i>
                 Cadastrar Produto

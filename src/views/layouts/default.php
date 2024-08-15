@@ -102,6 +102,7 @@
     <script>
         lucide.createIcons();
     </script>
+    <script src="<?= url("src/views/assets/scripts/header.js") ?>"></script>
 
     <?= $this->section('scripts') ?>
 </body>
