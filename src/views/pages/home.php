@@ -4,7 +4,7 @@
 <link rel="stylesheet" href=<?= url("src/views/assets/styles/home.css") ?>>
 <?php $this->stop() ?>
 
-<main class="container">
+<main>
     <aside>
         <div class="presentation-text">
             <h2>Teste com PHP para <br> <span>Desenvolvedor Júnior</span></h2>

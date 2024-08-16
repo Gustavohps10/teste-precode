@@ -1,4 +1,6 @@
 main {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     min-height: 85vh;
     border-top-left-radius: 32px;
@@ -45,4 +47,49 @@ main .presentation-container {
 
 main .presentation-container img {
     width: 95%;
+}
+
+@media (max-width: 1024px) {
+    main aside {
+        width: 100%;
+    }
+
+    main {
+        gap: 4rem;
+    }
+
+    main aside .presentation-text h2,
+    main aside .presentation-text h3,
+    main aside .presentation-text p {
+        text-align: center;
+    }
+
+    main .presentation-container {
+        flex: unset;
+    }
+
+    main aside .presentation-text .button {
+        margin: 0 auto;
+    }
+
+    main .presentation-container img {
+        width: 50%;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    main aside .presentation-text h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 2rem;
+    }
+
+    main aside .presentation-text h2 {
+        font-size: 2.5rem;
+    }
 }
