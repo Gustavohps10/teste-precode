@@ -48,7 +48,7 @@
     </div>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container links">
             <div class="social">
                 <img src=<?= url("src/views/assets/images/precode-logo-white.png") ?>>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>

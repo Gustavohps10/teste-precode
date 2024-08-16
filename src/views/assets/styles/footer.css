@@ -4,8 +4,14 @@
     color: #fff;
 }
 
+.footer .links {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
 .footer .container>div {
-    width: 300px;
+    min-width: 300px;
+    flex: 1;
 }
 
 .footer .container>div h2 {
@@ -42,6 +48,7 @@
 }
 
 .footer .social p {
+    text-wrap: balance;
     margin: 2rem 0;
     color: var(--blue-100);
 }
@@ -55,4 +62,10 @@
 
 .footer .copyright {
     color: #c2c8da;
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem;
+    }
 }
