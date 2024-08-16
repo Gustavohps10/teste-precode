@@ -30,3 +30,12 @@
     display: flex;
     justify-content: space-around;
 }
+
+input,
+textarea,
+button,
+select,
+svg,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
