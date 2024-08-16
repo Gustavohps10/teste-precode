@@ -57,7 +57,7 @@ form .form-body section#variations {
 }
 
 .variation {
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 8px;
     border: 2px solid #dee2e6;
     margin: 0.5rem 0;
@@ -81,8 +81,16 @@ form hr {
     border: none;
 }
 
+form #main,
+form #variations,
+form #variations-container,
+form #variations-container .variation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .input-box {
-    margin-bottom: 1.5rem;
     flex: 1;
 }
 
@@ -94,7 +102,7 @@ form hr {
     gap: 8px;
     border: 2px solid #dee2e6;
     border-radius: 8px;
-    min-width: 250px;
+    min-width: 100px;
     padding-left: 0.5rem;
 }
 
@@ -110,6 +118,25 @@ form hr {
     border: none;
     outline: none;
     background-color: transparent;
+}
+
+.mult-inputs {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.mult-inputs .button {
+    /* // margin-top: auto; */
+}
+
+form .form-body .attributes #attributes-container,
+.images-container,
+.specifications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 label {
@@ -154,12 +181,6 @@ textarea:focus,
     gap: 0.5em;
 }
 
-.mult-inputs {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
 .next-step {
     position: relative;
     float: right;
@@ -172,7 +193,7 @@ textarea:focus,
 
 .custom-select {
     position: relative;
-    min-width: 350px;
+    min-width: 300px;
 }
 
 .custom-select select {
@@ -229,4 +250,14 @@ textarea:focus,
     font-size: 1rem;
     margin-bottom: 1rem;
     background-color: #d86868;
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 1rem;
+    }
+
+    form #variations-container .variation {
+        padding: 1rem;
+    }
 }

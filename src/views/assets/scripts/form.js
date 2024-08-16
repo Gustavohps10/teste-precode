@@ -12,7 +12,7 @@ function openSection(sectionName, tabActive) {
     })
 
     let activeSection = document.getElementById(sectionName);
-    activeSection.style.display = 'block';
+    activeSection.style.display = 'flex';
 
     let tabs = document.querySelectorAll(".tab");
     tabs.forEach(tab => {

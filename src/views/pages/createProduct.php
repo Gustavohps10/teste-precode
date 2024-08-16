@@ -31,7 +31,6 @@
 
             <section id="main">
                 <h2>Informações principais</h2>
-                <br>
 
                 <div class="input-box">
                     <label for="sku">SKU do produto pai (opcional)</label>
@@ -273,7 +272,6 @@
 
                 <div class="attributes">
                     <h2>Atributos (opcional)</h2>
-                    <br>
 
                     <div class="controls">
                         <button onclick="newAttribute()" class="button button-tertiary sm" type="button"><i
@@ -338,7 +336,6 @@
                     </div>
                 </div>
 
-                <br>
                 <button class="button button-tertiary next-step" type="button"
                     onclick="openSection('variations', 'tabVariations')">Próximo<i
                         data-lucide="arrow-right"></i></button>
@@ -346,7 +343,6 @@
 
             <section id="variations">
                 <h2>Variações do produto (opcional)</h2>
-                <br>
 
                 <div id="variations-container">
                     <div id="0" class="variation">
@@ -452,17 +448,18 @@
                     </div>
                 </div>
 
-                <br>
                 <button onclick="newVariation()" class="button button-secondary sm" type="button"><i
                         data-lucide="copy-plus"></i> Nova
                     variação</button>
 
-                <br>
+                <div class="buttons">
+                    <button class="button button-primary next-step" type="submit">Cadastrar<i
+                            data-lucide="send-horizontal"></i></button>
+                    <button class="button button-tertiary previous-step" type="button"
+                        onclick="openSection('main', 'tabMain')"><i data-lucide="arrow-left"></i>Anterior</button>
 
-                <button class="button button-primary next-step" type="submit">Cadastrar<i
-                        data-lucide="send-horizontal"></i></button>
-                <button class="button button-tertiary previous-step" type="button"
-                    onclick="openSection('main', 'tabMain')"><i data-lucide="arrow-left"></i>Anterior</button>
+                </div>
+
             </section>
 
         </div>
