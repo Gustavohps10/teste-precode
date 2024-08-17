@@ -15,7 +15,7 @@ O teste consiste em cadastrar um produto na API da Precode. Deve ser desenvolvid
 > ❗ Não foi utilizado nenhum framework robusto como Laravel ou CodeIgniter, apenas o [Coffeecode Router](https://packagist.org/packages/coffeecode/router) para lidar com roteamento e requisições e o [PlatesPHP](https://platesphp.com/) para criar templates. Também não foi utilizado nenhum framework css como Tailwind ou Bootstrap, apenas CSS e JavaScript puro.
 
 ##### :clapper: Video da aplicação
-> Acesse aqui: [Video](https://player.livepush.io/emv52pPo5gLw1)
+> Acesse aqui: [Video](https://go.screenpal.com/watch/cZjb36V9AGR)
  
 ##### :mag_right: Scripts PostgreSQL
 > Você pode acessar aqui: [scripts.sql](https://github.com/Gustavohps10/teste-precode/blob/main/scripts.sql)
